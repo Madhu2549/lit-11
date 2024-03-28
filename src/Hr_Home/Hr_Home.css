@@ -1,0 +1,21 @@
+.main-body {
+  display: flex;
+  min-width: auto;
+  min-height: auto;
+}
+section {
+  display: flex;
+}
+.alpha-page {
+  width: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+}
+.main-page {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 8rem;
+  width: 70%;
+  left: 15rem;
+}

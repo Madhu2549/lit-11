@@ -1,0 +1,90 @@
+.Login_page {
+  width: 35vw;
+  height: 86.5vh;
+  border: 1px solid black;
+  background-color: aliceblue;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 10px;
+}
+.form_header {
+  display: flex;
+  justify-content: center;
+  color: rgb(2, 2, 107);
+  padding: 30px;
+  position: relative;
+  top: 25px;
+  right: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user_value_email,
+.user_value_password {
+  height: 25px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid black;
+  position: relative;
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid rgb(11, 41, 11);
+}
+.user_value_email {
+  position: relative;
+  top: 20px;
+}
+.user_value {
+  height: 40px;
+  width: 10vw;
+  font-size: 18px;
+  border: 2px solid green;
+  border-radius: 20px;
+  background-color: rgb(2, 112, 26);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  top: 20px;
+}
+.email-error-message {
+  color: red;
+  text-align: left;
+  font-size: 15px;
+  position: relative;
+  padding: 0%;
+  margin: 0%;
+  top: 20px;
+  left: 5px;
+}
+.password-error-message {
+  color: red;
+  position: relative;
+  font-size: 15px;
+  right: 80px;
+}
+.reset_password-login {
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 3px;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.reset_password-login a {
+  color: rgb(51, 51, 235);
+  font-weight: 100;
+}
+.Signup_btn {
+  position: relative;
+  top: 40px;
+}
+span {
+  color: blue;
+  cursor: pointer;
+}
