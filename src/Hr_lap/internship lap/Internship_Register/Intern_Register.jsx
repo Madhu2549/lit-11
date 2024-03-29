@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./Intern_Register.css";
 
@@ -9,7 +8,7 @@ export default function Intern_Register() {
     // documentChecklist: false,
     personalInfo: false,
     addressInfo: false,
-    
+
     emergencyContact1: false,
     emergencyContact2: false,
     employeenomination: false,
@@ -17,9 +16,8 @@ export default function Intern_Register() {
     acknowledgment: false,
     dependentInformation: false,
     educationdeatails: false,
-    experiencehistory: false ,
+    experiencehistory: false,
     documentChecklist: false,
-
   });
 
   const [formData, setFormData] = useState({
@@ -29,8 +27,6 @@ export default function Intern_Register() {
       joiningOffice: "",
       joiningTitle: "",
     },
-
-
 
     personalInfo: {
       title: "",
@@ -52,7 +48,6 @@ export default function Intern_Register() {
       pfAccountNumber: "",
       uan: "",
     },
-
 
     personalInfo: {
       title: "",
@@ -88,7 +83,7 @@ export default function Intern_Register() {
       landline: "",
       mobile: "",
     },
-  
+
     emergencyContact2: {
       name: "",
       relationship: "",
@@ -102,7 +97,6 @@ export default function Intern_Register() {
       age: "",
       address: " ",
       mobile: "",
-
     },
 
     bankDetails: {
@@ -110,7 +104,6 @@ export default function Intern_Register() {
       bankAcNo: "",
       bankBranch: "",
       ifscCode: "",
-
     },
 
     acknowledgment: {
@@ -122,7 +115,6 @@ export default function Intern_Register() {
       relationship: "",
       dateOfBirth: "",
 
-
       name1: "",
       relationship1: "",
       dateOfBirth1: "",
@@ -130,11 +122,9 @@ export default function Intern_Register() {
       name2: "",
       relationship2: "",
       dateOfBirth2: "",
-
     },
 
     educationdeatails: {
-
       degree1: "",
       nameofuniversity1: "",
       marksObtained1: "",
@@ -149,8 +139,6 @@ export default function Intern_Register() {
       nameofuniversity3: "",
       marksObtained3: "",
       passingyerrar3: "",
-
-
     },
 
     experiencehistory: {
@@ -161,7 +149,6 @@ export default function Intern_Register() {
       totalyearsofExperience1: "",
       remarks1: "",
 
-
       nameofthecompany2: "",
       designation2: "",
       dateofjoining2: "",
@@ -169,17 +156,13 @@ export default function Intern_Register() {
       totalyearsofExperience2: "",
       remarks2: "",
 
-
       nameofthecompany3: "",
       designation3: "",
       dateofjoining3: "",
       dateofresigning3: "",
       totalyearsofExperience3: "",
       remarks3: "",
-
-
     },
-
 
     documentChecklist: {
       signedCopyOfAppointmentLetter: false,
@@ -192,12 +175,7 @@ export default function Intern_Register() {
       EducationDegreeCertificateMarksheet: false,
       PANCardAcknowledgementslipofForm49: false,
     },
-
-
-
   });
-
-
 
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -219,10 +197,7 @@ export default function Intern_Register() {
     }));
   };
 
-
-   
   const handleSubmit = async () => {
-
     try {
       const missingFields = [];
       const missingFields2 = [];
@@ -239,7 +214,6 @@ export default function Intern_Register() {
       const missingFields12 = [];
       const missingFields13 = [];
       const missingFields14 = [];
-      
 
       if (!formData.fullName.fullName.trim()) {
         setErrorMessage("Full Name is required");
@@ -286,10 +260,11 @@ export default function Intern_Register() {
         missingFields14.push("PAN Card Ac knowledgement slipof Form49");
       }
       if (missingFields14.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields14.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields14.join(", ")}`
+        );
         return;
       }
-
 
       if (!formData.personalInfo.title.trim()) {
         setErrorMessage("title is required");
@@ -386,7 +361,9 @@ export default function Intern_Register() {
         missingFields5.push("dependent dateOfBirth");
       }
       if (missingFields5.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields5.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields5.join(", ")}`
+        );
         return;
       }
       if (!formData.dependentInformation.name1.trim()) {
@@ -399,7 +376,9 @@ export default function Intern_Register() {
         missingFields6.push("dependent dateOfBirth");
       }
       if (missingFields6.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields6.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields6.join(", ")}`
+        );
         return;
       }
       if (!formData.dependentInformation.name2.trim()) {
@@ -412,10 +391,12 @@ export default function Intern_Register() {
         missingFields7.push("dependent dateOfBirth");
       }
       if (missingFields7.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields7.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields7.join(", ")}`
+        );
         return;
       }
-      
+
       if (!formData.emergencyContact1.name.trim()) {
         missingFields.push("Emergency Contact Name");
       }
@@ -430,7 +411,9 @@ export default function Intern_Register() {
       }
 
       if (missingFields.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields.join(", ")}`
+        );
         return;
       }
 
@@ -448,7 +431,9 @@ export default function Intern_Register() {
       }
 
       if (missingFields2.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields2.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields2.join(", ")}`
+        );
         return;
       }
       if (!formData.educationdeatails.degree1.trim()) {
@@ -464,7 +449,9 @@ export default function Intern_Register() {
         missingFields8.push("passing yerrar");
       }
       if (missingFields8.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields8.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields8.join(", ")}`
+        );
         return;
       }
       if (!formData.educationdeatails.degree2.trim()) {
@@ -480,7 +467,9 @@ export default function Intern_Register() {
         missingFields9.push("passing yerrar");
       }
       if (missingFields9.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields9.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields9.join(", ")}`
+        );
         return;
       }
       if (!formData.educationdeatails.degree3.trim()) {
@@ -496,7 +485,9 @@ export default function Intern_Register() {
         missingFields10.push("passing yerrar");
       }
       if (missingFields10.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields10.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields10.join(", ")}`
+        );
         return;
       }
       if (!formData.experiencehistory.nameofthecompany1.trim()) {
@@ -518,7 +509,9 @@ export default function Intern_Register() {
         missingFields11.push("remarks");
       }
       if (missingFields11.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields11.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields11.join(", ")}`
+        );
         return;
       }
       if (!formData.experiencehistory.nameofthecompany2.trim()) {
@@ -540,7 +533,9 @@ export default function Intern_Register() {
         missingFields12.push("remarks");
       }
       if (missingFields12.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields12.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields12.join(", ")}`
+        );
         return;
       }
       if (!formData.experiencehistory.nameofthecompany3.trim()) {
@@ -562,7 +557,9 @@ export default function Intern_Register() {
         missingFields13.push("remarks");
       }
       if (missingFields13.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields13.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields13.join(", ")}`
+        );
         return;
       }
 
@@ -584,11 +581,13 @@ export default function Intern_Register() {
       }
 
       if (missingFields3.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields3.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields3.join(", ")}`
+        );
         return;
       }
       if (!formData.bankDetails.bankName.trim()) {
-         missingFields4.push("Bank Name");
+        missingFields4.push("Bank Name");
       }
       if (!formData.bankDetails.bankAcNo.trim()) {
         missingFields4.push("Bank Ac No");
@@ -602,14 +601,13 @@ export default function Intern_Register() {
       }
 
       if (missingFields4.length > 0) {
-        setErrorMessage(`Please fill in the following fields: ${missingFields4.join(", ")}`);
+        setErrorMessage(
+          `Please fill in the following fields: ${missingFields4.join(", ")}`
+        );
         return;
       }
-      
-      
 
       const dataToSend = {
-
         fullName: formData.fullName.fullName,
         joiningDate: formData.joiningInfo.joiningDate,
         joiningOffice: formData.joiningInfo.joiningOffice,
@@ -682,28 +680,25 @@ export default function Intern_Register() {
         designation1: formData.experiencehistory.designation1,
         dateofjoining1: formData.experiencehistory.dateofjoining1,
         dateofresigning1: formData.experiencehistory.dateofresigning1,
-        totalyearsofExperience1: formData.experiencehistory.totalyearsofExperience1,
+        totalyearsofExperience1:
+          formData.experiencehistory.totalyearsofExperience1,
         remarks1: formData.experiencehistory.remarks1,
-
 
         nameofthecompany2: formData.experiencehistory.nameofthecompany2,
         designation2: formData.experiencehistory.designation2,
         dateofjoining2: formData.experiencehistory.dateofjoining2,
         dateofresigning2: formData.experiencehistory.dateofresigning2,
-        totalyearsofExperience2: formData.experiencehistory.totalyearsofExperience2,
+        totalyearsofExperience2:
+          formData.experiencehistory.totalyearsofExperience2,
         remarks2: formData.experiencehistory.remarks2,
 
-        
         nameofthecompany3: formData.experiencehistory.nameofthecompany3,
         designation3: formData.experiencehistory.designation3,
         dateofjoining3: formData.experiencehistory.dateofjoining3,
         dateofresigning3: formData.experiencehistory.dateofresigning3,
-        totalyearsofExperience3: formData.experiencehistory.totalyearsofExperience3,
+        totalyearsofExperience3:
+          formData.experiencehistory.totalyearsofExperience3,
         remarks3: formData.experiencehistory.remarks3,
-
-
-
-
       };
 
       console.log(dataToSend);
@@ -714,7 +709,7 @@ export default function Intern_Register() {
     }
   };
 
-  // personalInfo: s 
+  // personalInfo: s
 
   const handlePersonalInfoChange = (field, value) => {
     setFormData((prevData) => ({
@@ -728,9 +723,7 @@ export default function Intern_Register() {
 
   // personalInfo: e
 
-
-
-  //adrrass_info s 
+  //adrrass_info s
 
   const handleAddressInfoChange = (field, value) => {
     setFormData((prevData) => ({
@@ -742,9 +735,6 @@ export default function Intern_Register() {
     }));
   };
   // adrrass_info e //
-
-
-
 
   // emergencyContact1: e
 
@@ -760,14 +750,11 @@ export default function Intern_Register() {
 
   // emergencyContact2: e
 
-
   // employeenomination s
   const handleemployeenominationChange = (field) => (e) => {
     handleInputChange("employeenomination", field, e.target.value);
   };
- // employeenomination e
-
-
+  // employeenomination e
 
   // bank deatails s
 
@@ -775,221 +762,206 @@ export default function Intern_Register() {
     handleInputChange("bankDetails", field, e.target.value);
   };
 
-   // bank deatails e
+  // bank deatails e
 
+  // acknowledgment s
 
+  const [name, setName] = useState("");
+  const [date, setDate] = useState("");
 
-    // acknowledgment s
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
 
-    const [name, setName] = useState('');
-    const [date, setDate] = useState('');
-  
-    const handleNameChange = (event) => {
-      setName(event.target.value);
-    };
-  
-    const handleDateChange = (event) => {
-      setDate(event.target.value);
-    };
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
+  };
 
-    // acknowledgment e
+  // acknowledgment e
 
-    // dependent s
+  // dependent s
 
-    const handledependentInformationChange = (field) => (e) => {
-      handleInputChange("dependentInformation", field, e.target.value);
-    };
-    // dependent e
+  const handledependentInformationChange = (field) => (e) => {
+    handleInputChange("dependentInformation", field, e.target.value);
+  };
+  // dependent e
 
-    // education s
+  // education s
 
-    const handleeducationdeatailsChange = (field) => (e) => {
-      handleInputChange("educationdeatails", field, e.target.value);
-    };
-    // education e
+  const handleeducationdeatailsChange = (field) => (e) => {
+    handleInputChange("educationdeatails", field, e.target.value);
+  };
+  // education e
 
-    
-  
+  //exprience s
 
-    //exprience s
+  const handleexperiencehistoryChange = (field) => (e) => {
+    handleInputChange("experiencehistory", field, e.target.value);
+  };
 
-    const handleexperiencehistoryChange = (field) => (e) => {
-      handleInputChange("experiencehistory", field, e.target.value);
-    };
+  //exprience e
 
+  // check list s
 
-    //exprience e
+  const handleDocumentChecklistChange = (documentType) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      documentChecklist: {
+        ...prevData.documentChecklist,
+        [documentType]: !prevData.documentChecklist[documentType],
+      },
+    }));
+  };
 
+  // check list e
 
-    // check list s 
+  // form reset 1 s
 
-    const handleDocumentChecklistChange = (documentType) => {
-      setFormData((prevData) => ({
-        ...prevData,
-        documentChecklist: {
-          ...prevData.documentChecklist,
-          [documentType]: !prevData.documentChecklist[documentType],
-        },
-      }));
-    };
+  const resetFormFields = () => {
+    setAccordionState({
+      fullName: { isOpen: false, fullName: "" },
+      joiningInfo: {
+        isOpen: false,
+        joiningDate: "",
+        joiningOffice: "",
+        joiningTitle: "",
+      },
+      documentChecklist: {
+        isOpen: false,
+        signedCopyOfAppointmentLetter: false,
+        photographs: false,
+        curriculumVitae: false,
+        proofOfIdentity: false,
+        birthCertificate: false,
+        Relieving: false,
+        LatestPayslip: false,
+        EducationDegreeCertificateMarksheet: false,
+        PANCardAcknowledgementslipofForm49: false,
+      },
+      personalInfo: {
+        title: "",
+        firstName: "",
+        middleName: "",
+        lastName: "",
+        dateOfBirth: "",
+        gender: "",
+        fatherName: "",
+        motherName: "",
+        maritalStatus: "",
+        spouseName: "",
+        identityMark: "",
+        bloodGroup: "",
+        allergies: "",
+        passportNumber: "",
+        panNumber: "",
+        aadharNumber: "",
+        pfAccountNumber: "",
+        uan: "",
+      },
+      addressInfo: {
+        presentAddress: "",
+        permanentAddress: "",
+        mobileNumber: "",
+        personalEmail: "",
+      },
+      dependentInformation: {
+        name: "",
+        relationship: "",
+        dateOfBirth: "",
 
-    // check list e
+        name1: "",
+        relationship1: "",
+        dateOfBirth1: "",
 
+        name2: "",
+        relationship2: "",
+        dateOfBirth2: "",
+      },
+      emergencyContact1: {
+        name: "",
+        relationship: "",
+        landline: "",
+        mobile: "",
+      },
+      emergencyContact2: {
+        name: "",
+        relationship: "",
+        landline: "",
+        mobile: "",
+      },
 
-    // form reset 1 s
+      educationdeatails: {
+        degree1: "",
+        nameofuniversity1: "",
+        marksObtained1: "",
+        passingyerrar1: "",
 
-    const resetFormFields = () => {
-      setAccordionState({
-      fullName: { isOpen: false, fullName: ""},
-      joiningInfo: { isOpen: false, joiningDate: "", joiningOffice: "", joiningTitle: ""},
-      documentChecklist: { isOpen: false, signedCopyOfAppointmentLetter: false,
-      photographs: false,
-      curriculumVitae: false,
-      proofOfIdentity: false,
-      birthCertificate: false,
-      Relieving: false,
-      LatestPayslip: false,
-      EducationDegreeCertificateMarksheet: false,
-      PANCardAcknowledgementslipofForm49: false, },
-       personalInfo: {
-      title: "",
-      firstName: "",
-      middleName: "",
-      lastName: "",
-      dateOfBirth: "",
-      gender: "",
-      fatherName: "",
-      motherName: "",
-      maritalStatus: "",
-      spouseName: "",
-      identityMark: "",
-      bloodGroup: "",
-      allergies: "",
-      passportNumber: "",
-      panNumber: "",
-      aadharNumber: "",
-      pfAccountNumber: "",
-      uan: "",
-    },
-       addressInfo: {
-      presentAddress: "",
-      permanentAddress: "",
-      mobileNumber: "",
-      personalEmail: "",
-    },
-       dependentInformation: {
-      name: "",
-      relationship: "",
-      dateOfBirth: "",
+        degree2: "",
+        nameofuniversity2: "",
+        marksObtained2: "",
+        passingyerrar2: "",
 
+        degree3: "",
+        nameofuniversity3: "",
+        marksObtained3: "",
+        passingyerrar3: "",
+      },
 
-      name1: "",
-      relationship1: "",
-      dateOfBirth1: "",
+      experiencehistory: {
+        nameofthecompany1: "",
+        designation1: "",
+        dateofjoining1: "",
+        dateofresigning1: "",
+        totalyearsofExperience1: "",
+        remarks1: "",
 
-      name2: "",
-      relationship2: "",
-      dateOfBirth2: "",
+        nameofthecompany2: "",
+        designation2: "",
+        dateofjoining2: "",
+        dateofresigning2: "",
+        totalyearsofExperience2: "",
+        remarks2: "",
 
-    },
-        emergencyContact1: {
-      name: "",
-      relationship: "",
-      landline: "",
-      mobile: "",
-    },
-        emergencyContact2: {
-      name: "",
-      relationship: "",
-      landline: "",
-      mobile: "",
-    },
+        nameofthecompany3: "",
+        designation3: "",
+        dateofjoining3: "",
+        dateofresigning3: "",
+        totalyearsofExperience3: "",
+        remarks3: "",
+      },
 
-   educationdeatails: {
+      employeenomination: {
+        name: "",
+        relationship: "",
+        age: "",
+        address: " ",
+        mobile: "",
+      },
 
-      degree1: "",
-      nameofuniversity1: "",
-      marksObtained1: "",
-      passingyerrar1: "",
+      bankDetails: {
+        bankName: "",
+        bankAcNo: "",
+        bankBranch: "",
+        ifscCode: "",
+      },
+    });
+  };
 
-      degree2: "",
-      nameofuniversity2: "",
-      marksObtained2: "",
-      passingyerrar2: "",
+  // form reset 1 e
 
-      degree3: "",
-      nameofuniversity3: "",
-      marksObtained3: "",
-      passingyerrar3: "",
+  // prient s
 
+  // const handlePrint = () => {
+  //   window.print();
+  // };
 
-    },
-
-  
-  experiencehistory: {
-      nameofthecompany1: "",
-      designation1: "",
-      dateofjoining1: "",
-      dateofresigning1: "",
-      totalyearsofExperience1: "",
-      remarks1: "",
-
-
-      nameofthecompany2: "",
-      designation2: "",
-      dateofjoining2: "",
-      dateofresigning2: "",
-      totalyearsofExperience2: "",
-      remarks2: "",
-
-
-      nameofthecompany3: "",
-      designation3: "",
-      dateofjoining3: "",
-      dateofresigning3: "",
-      totalyearsofExperience3: "",
-      remarks3: "",
-
-
-    },
-
-employeenomination: {
-      name: "",
-      relationship: "",
-      age: "",
-      address: " ",
-      mobile: "",
-
-    },
-
- bankDetails: {
-      bankName: "",
-      bankAcNo: "",
-      bankBranch: "",
-      ifscCode: "",
-
-    },
-
-      });
-    };
-   
-
-    // form reset 1 e
-       
-    // prient s
-     
-    // const handlePrint = () => {
-    //   window.print();
-    // };
-
-    // prient e
+  // prient e
 
   return (
     <div className="registration-form">
       <h2>Registration Form</h2>
 
       {/* Section 1: Full Name */}
-
 
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("fullName")}>
@@ -1003,7 +975,9 @@ employeenomination: {
               type="text"
               placeholder="Enter Full Name"
               value={formData.fullName.fullName}
-              onChange={(e) => handleInputChange("fullName", "fullName", e.target.value)}
+              onChange={(e) =>
+                handleInputChange("fullName", "fullName", e.target.value)
+              }
               required
             />
             {formData.fullName.fullName.length > 0 &&
@@ -1058,9 +1032,12 @@ employeenomination: {
                   required
                 />
                 {formData.joiningInfo.joiningOffice.length > 0 &&
-                  !/^[A-Za-z0-9\s ]*$/.test(formData.joiningInfo.joiningOffice) && (
+                  !/^[A-Za-z0-9\s ]*$/.test(
+                    formData.joiningInfo.joiningOffice
+                  ) && (
                     <p className="error-message">
-                      Joining Office/Location must contain only letters and numbers
+                      Joining Office/Location must contain only letters and
+                      numbers
                     </p>
                   )}
               </td>
@@ -1092,11 +1069,7 @@ employeenomination: {
         )}
       </div>
 
-
-      
-
-
-       {/* Section 3: Checklist of documents  */}
+      {/* Section 3: Checklist of documents  */}
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("documentChecklist")}>
           {accordionState.documentChecklist
@@ -1108,7 +1081,9 @@ employeenomination: {
             <tbody>
               <tr>
                 <th>Document</th>
-                <td><b>Submitted</b></td>
+                <td>
+                  <b>Submitted</b>
+                </td>
                 <th>OFFICIAL USE ONLY</th>
               </tr>
               <tr>
@@ -1116,14 +1091,22 @@ employeenomination: {
                 <td>
                   <input
                     type="checkbox"
-                    checked={formData.documentChecklist.signedCopyOfAppointmentLetter}
-                    onChange={() => handleDocumentChecklistChange("signedCopyOfAppointmentLetter")}
+                    checked={
+                      formData.documentChecklist.signedCopyOfAppointmentLetter
+                    }
+                    onChange={() =>
+                      handleDocumentChecklistChange(
+                        "signedCopyOfAppointmentLetter"
+                      )
+                    }
                     required
                   />
                 </td>
-                <td><input type="checkbox" name="" id="" /></td>
+                <td>
+                  <input type="checkbox" name="" id="" />
+                </td>
               </tr>
-             
+
               <tr>
                 <td>2. Self Photographs (Passport Sized, Colour)</td>
                 <td>
@@ -1132,7 +1115,8 @@ employeenomination: {
                     checked={formData.documentChecklist.photographs}
                     onChange={() =>
                       handleDocumentChecklistChange("photographs")
-                    }required
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1147,7 +1131,8 @@ employeenomination: {
                     checked={formData.documentChecklist.curriculumVitae}
                     onChange={() =>
                       handleDocumentChecklistChange("curriculumVitae")
-                    }required
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1162,7 +1147,8 @@ employeenomination: {
                     checked={formData.documentChecklist.proofOfIdentity}
                     onChange={() =>
                       handleDocumentChecklistChange("proofOfIdentity")
-                    }required
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1177,7 +1163,8 @@ employeenomination: {
                     checked={formData.documentChecklist.birthCertificate}
                     onChange={() =>
                       handleDocumentChecklistChange("birthCertificate")
-                    }required
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1189,16 +1176,9 @@ employeenomination: {
                 <td>
                   <input
                     type="checkbox"
-                    checked={
-                      formData.documentChecklist[
-                      "Relieving"
-                      ]
-                    }
-                    onChange={() =>
-                      handleDocumentChecklistChange(
-                        "Relieving"
-                      )
-                    }required
+                    checked={formData.documentChecklist["Relieving"]}
+                    onChange={() => handleDocumentChecklistChange("Relieving")}
+                    required
                   />
                 </td>
                 <td>
@@ -1210,16 +1190,11 @@ employeenomination: {
                 <td>
                   <input
                     type="checkbox"
-                    checked={
-                      formData.documentChecklist[
-                      "LatestPayslip"
-                      ]
-                    }
+                    checked={formData.documentChecklist["LatestPayslip"]}
                     onChange={() =>
-                      handleDocumentChecklistChange(
-                        "LatestPayslip"
-                      )
-                    }required 
+                      handleDocumentChecklistChange("LatestPayslip")
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1232,13 +1207,15 @@ employeenomination: {
                   <input
                     type="checkbox"
                     checked={
-                      formData.documentChecklist.EducationDegreeCertificateMarksheet
+                      formData.documentChecklist
+                        .EducationDegreeCertificateMarksheet
                     }
                     onChange={() =>
                       handleDocumentChecklistChange(
                         "EducationDegreeCertificateMarksheet"
                       )
-                    }required
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1251,13 +1228,15 @@ employeenomination: {
                   <input
                     type="checkbox"
                     checked={
-                      formData.documentChecklist.PANCardAcknowledgementslipofForm49
+                      formData.documentChecklist
+                        .PANCardAcknowledgementslipofForm49
                     }
                     onChange={() =>
                       handleDocumentChecklistChange(
                         "PANCardAcknowledgementslipofForm49"
                       )
-                    } required
+                    }
+                    required
                   />
                 </td>
                 <td>
@@ -1267,20 +1246,18 @@ employeenomination: {
               <tr>
                 <td colSpan="3"> Note: All photocopies to be self certified</td>
               </tr>
-
             </tbody>
           </table>
         )}
       </div>
 
-
-
-
       {/* Section 4: personal Information */}
 
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("personalInfo")}>
-          {accordionState.personalInfo ? "4. Personal Information -" : "4. Personal Information +"}
+          {accordionState.personalInfo
+            ? "4. Personal Information -"
+            : "4. Personal Information +"}
         </h6>
         {accordionState.personalInfo && (
           <table>
@@ -1292,11 +1269,7 @@ employeenomination: {
                     type="text"
                     value={formData.personalInfo.title}
                     onChange={(e) =>
-                      handleInputChange(
-                        "personalInfo",
-                        "title",
-                        e.target.value
-                      )
+                      handleInputChange("personalInfo", "title", e.target.value)
                     }
                     required
                   />
@@ -1314,7 +1287,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.firstName}
-                    onChange={(e) => handleInputChange("personalInfo", "firstName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "firstName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.firstName.length > 0 &&
@@ -1331,7 +1310,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.middleName}
-                    onChange={(e) => handleInputChange("personalInfo", "middleName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "middleName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.middleName.length > 0 &&
@@ -1340,7 +1325,6 @@ employeenomination: {
                         MiddleName must contain only letters
                       </p>
                     )}
-
                 </td>
               </tr>
               <tr>
@@ -1349,7 +1333,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.lastName}
-                    onChange={(e) => handleInputChange("personalInfo", "lastName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "lastName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
 
@@ -1367,7 +1357,13 @@ employeenomination: {
                   <input
                     type="date"
                     value={formData.personalInfo.dateOfBirth}
-                    onChange={(e) => handleInputChange("personalInfo", "dateOfBirth", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "dateOfBirth",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                 </td>
@@ -1378,14 +1374,18 @@ employeenomination: {
                   <input
                     type="checkbox"
                     checked={formData.personalInfo.gender === "Male"}
-                    onChange={() => handleInputChange("personalInfo", "gender", "Male")}
+                    onChange={() =>
+                      handleInputChange("personalInfo", "gender", "Male")
+                    }
                     required
                   />
                   Male {"\t"}
                   <input
                     type="checkbox"
                     checked={formData.personalInfo.gender === "Female"}
-                    onChange={() => handleInputChange("personalInfo", "gender", "Female")}
+                    onChange={() =>
+                      handleInputChange("personalInfo", "gender", "Female")
+                    }
                     required
                   />
                   Female
@@ -1397,7 +1397,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.fatherName}
-                    onChange={(e) => handleInputChange("personalInfo", "fatherName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "fatherName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.fatherName.length > 0 &&
@@ -1406,7 +1412,6 @@ employeenomination: {
                         FatherName must contain only letters
                       </p>
                     )}
-
                 </td>
               </tr>
               <tr>
@@ -1415,7 +1420,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.motherName}
-                    onChange={(e) => handleInputChange("personalInfo", "motherName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "motherName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.motherName.length > 0 &&
@@ -1432,11 +1443,19 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.maritalStatus}
-                    onChange={(e) => handleInputChange("personalInfo", "maritalStatus", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "maritalStatus",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.maritalStatus.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.personalInfo.maritalStatus) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.personalInfo.maritalStatus
+                    ) && (
                       <p className="error-message">
                         Marital Status must contain only letters
                       </p>
@@ -1449,7 +1468,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.spouseName}
-                    onChange={(e) => handleInputChange("personalInfo", "spouseName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "spouseName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.spouseName.length > 0 &&
@@ -1466,17 +1491,24 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.identityMark}
-                    onChange={(e) => handleInputChange("personalInfo", "identityMark", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "identityMark",
+                        e.target.value
+                      )
+                    }
                     required
                   />
 
                   {formData.personalInfo.identityMark.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.personalInfo.identityMark) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.personalInfo.identityMark
+                    ) && (
                       <p className="error-message">
                         Identity Mark must contain only letters
                       </p>
                     )}
-
                 </td>
               </tr>
               <tr>
@@ -1485,17 +1517,24 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.bloodGroup}
-                    onChange={(e) => handleInputChange("personalInfo", "bloodGroup", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "bloodGroup",
+                        e.target.value
+                      )
+                    }
                     required
                   />
 
                   {formData.personalInfo.bloodGroup.length > 0 &&
-                    !/^[A-Za-z\s+-]*$/.test(formData.personalInfo.bloodGroup) && (
+                    !/^[A-Za-z\s+-]*$/.test(
+                      formData.personalInfo.bloodGroup
+                    ) && (
                       <p className="error-message">
                         Blood Group must contain only letters
                       </p>
                     )}
-
                 </td>
               </tr>
               <tr>
@@ -1504,9 +1543,14 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.allergies}
-                    onChange={(e) => handleInputChange("personalInfo", "allergies", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "allergies",
+                        e.target.value
+                      )
+                    }
                     required
-
                   />
                   {formData.personalInfo.allergies.length > 0 &&
                     !/^[A-Za-z\s]*$/.test(formData.personalInfo.allergies) && (
@@ -1522,16 +1566,23 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.passportNumber}
-                    onChange={(e) => handleInputChange("personalInfo", "passportNumber", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "passportNumber",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.passportNumber.length > 0 &&
-                    !/^[A-Za-z0-9]*$/.test(formData.personalInfo.passportNumber) && (
+                    !/^[A-Za-z0-9]*$/.test(
+                      formData.personalInfo.passportNumber
+                    ) && (
                       <p className="error-message">
                         Passport Number must contain only letters and numbers
                       </p>
                     )}
-
                 </td>
               </tr>
               <tr>
@@ -1540,7 +1591,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.panNumber}
-                    onChange={(e) => handleInputChange("personalInfo", "panNumber", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "panNumber",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.panNumber.length > 0 &&
@@ -1549,7 +1606,6 @@ employeenomination: {
                         PAN No must contain only letters and numbers
                       </p>
                     )}
-
                 </td>
               </tr>
               <tr>
@@ -1558,7 +1614,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.aadharNumber}
-                    onChange={(e) => handleInputChange("personalInfo", "aadharNumber", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "aadharNumber",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.aadharNumber.length > 0 &&
@@ -1575,7 +1637,13 @@ employeenomination: {
                   <input
                     type="text"
                     value={formData.personalInfo.pfAccountNumber}
-                    onChange={(e) => handleInputChange("personalInfo", "pfAccountNumber", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "personalInfo",
+                        "pfAccountNumber",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.personalInfo.pfAccountNumber.length > 0 &&
@@ -1591,12 +1659,12 @@ employeenomination: {
         )}
       </div>
 
-
-
       {/* Section 5: AddressInformation */}
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("addressInfo")}>
-          {accordionState.addressInfo ? "5. Address Information -" : "5. Address Information +"}
+          {accordionState.addressInfo
+            ? "5. Address Information -"
+            : "5. Address Information +"}
         </h6>
         {accordionState.addressInfo && (
           <table>
@@ -1604,71 +1672,96 @@ employeenomination: {
               <tr>
                 <td>Present Address:</td>
                 <td>
-                  <textarea name="presentAddress" id="presentAddress" rows="3" cols="30"
-
+                  <textarea
+                    name="presentAddress"
+                    id="presentAddress"
+                    rows="3"
+                    cols="30"
                     value={formData.addressInfo.presentAddress}
-                    onChange={(e) => handleInputChange("addressInfo", "presentAddress", e.target.value)} required
-
-
+                    onChange={(e) =>
+                      handleInputChange(
+                        "addressInfo",
+                        "presentAddress",
+                        e.target.value
+                      )
+                    }
+                    required
                   />
                 </td>
               </tr>
               <tr>
                 <td>Permanent Address:</td>
                 <td>
-                  <textarea name="permanentAddress" id="permanentAddress" rows="3" cols="30"
-
+                  <textarea
+                    name="permanentAddress"
+                    id="permanentAddress"
+                    rows="3"
+                    cols="30"
                     value={formData.addressInfo.permanentAddress}
-                    onChange={(e) => handleInputChange("addressInfo", "permanentAddress", e.target.value)} required
-
+                    onChange={(e) =>
+                      handleInputChange(
+                        "addressInfo",
+                        "permanentAddress",
+                        e.target.value
+                      )
+                    }
+                    required
                   />
-
-
-
                 </td>
               </tr>
               <tr>
                 <td>Mobile Number:</td>
                 <td>
-                  <input type="text" name="mobileNumber" id="mobileNumber"
-
+                  <input
+                    type="text"
+                    name="mobileNumber"
+                    id="mobileNumber"
                     value={formData.addressInfo.mobileNumber}
-                    onChange={(e) => handleInputChange("addressInfo", "mobileNumber", e.target.value)} required
+                    onChange={(e) =>
+                      handleInputChange(
+                        "addressInfo",
+                        "mobileNumber",
+                        e.target.value
+                      )
+                    }
+                    required
                   />
 
-
                   {formData.addressInfo.mobileNumber.length > 0 &&
-                    !/^[6-9][0-9]{9}$/.test(formData.addressInfo.mobileNumber) && (
+                    !/^[6-9][0-9]{9}$/.test(
+                      formData.addressInfo.mobileNumber
+                    ) && (
                       <p className="error-message">
-                        mobile Number must contain exactly 10 digits, starting with a number between 6 to 9.
+                        mobile Number must contain exactly 10 digits, starting
+                        with a number between 6 to 9.
                       </p>
-                    )
-                  }
-
-
-
-
+                    )}
                 </td>
               </tr>
               <tr>
                 <td>Personal Email ID:</td>
                 <td>
-                  <input type="text" name="personalEmail" id="personalEmail"
-
+                  <input
+                    type="text"
+                    name="personalEmail"
+                    id="personalEmail"
                     value={formData.addressInfo.personalEmail}
-                    onChange={(e) => handleInputChange("addressInfo", "personalEmail", e.target.value)} required
-
+                    onChange={(e) =>
+                      handleInputChange(
+                        "addressInfo",
+                        "personalEmail",
+                        e.target.value
+                      )
+                    }
+                    required
                   />
 
                   {formData.addressInfo.personalEmail.length > 0 &&
-                    !/^\S+@\S+\.\S+$/.test(formData.addressInfo.personalEmail) && (
-                      <p className="error-message">
-                        Invalid email address.
-                      </p>
-                    )
-                  }
-
-
+                    !/^\S+@\S+\.\S+$/.test(
+                      formData.addressInfo.personalEmail
+                    ) && (
+                      <p className="error-message">Invalid email address.</p>
+                    )}
                 </td>
               </tr>
             </tbody>
@@ -1676,13 +1769,13 @@ employeenomination: {
         )}
       </div>
 
-
-
       {/* Section 6: Dependent Information */}
 
-       <div className="form-section">
+      <div className="form-section">
         <h6 onClick={() => toggleAccordion("dependentInformation")}>
-          {accordionState.dependentInformation ? "6. dependent Information -" : "6. dependent Information +"}
+          {accordionState.dependentInformation
+            ? "6. dependent Information -"
+            : "6. dependent Information +"}
         </h6>
         {accordionState.dependentInformation && (
           <table>
@@ -1692,7 +1785,6 @@ employeenomination: {
                 <td>Relationship</td>
                 <td>Date Of Birth</td>
               </tr>
-
 
               <tr>
                 <td>
@@ -1705,7 +1797,9 @@ employeenomination: {
                     required
                   />
                   {formData.dependentInformation.name1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.dependentInformation.name1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.dependentInformation.name1
+                    ) && (
                       <p className="error-message">
                         dependent Name must contain only letters
                       </p>
@@ -1721,7 +1815,9 @@ employeenomination: {
                     required
                   />
                   {formData.dependentInformation.relationship1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.dependentInformation.relationship1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.dependentInformation.relationship1
+                    ) && (
                       <p className="error-message">
                         dependent relationship must contain only letters
                       </p>
@@ -1749,7 +1845,9 @@ employeenomination: {
                     required
                   />
                   {formData.dependentInformation.name2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.dependentInformation.name2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.dependentInformation.name2
+                    ) && (
                       <p className="error-message">
                         dependent Name must contain only letters
                       </p>
@@ -1765,7 +1863,9 @@ employeenomination: {
                     required
                   />
                   {formData.dependentInformation.relationship2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.dependentInformation.relationship2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.dependentInformation.relationship2
+                    ) && (
                       <p className="error-message">
                         dependent relationship must contain only letters
                       </p>
@@ -1783,7 +1883,6 @@ employeenomination: {
                 </td>
               </tr>
 
-
               <tr>
                 <td>
                   <input
@@ -1795,7 +1894,9 @@ employeenomination: {
                     required
                   />
                   {formData.dependentInformation.name.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.dependentInformation.name) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.dependentInformation.name
+                    ) && (
                       <p className="error-message">
                         dependent Name must contain only letters
                       </p>
@@ -1811,7 +1912,9 @@ employeenomination: {
                     required
                   />
                   {formData.dependentInformation.relationship.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.dependentInformation.relationship) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.dependentInformation.relationship
+                    ) && (
                       <p className="error-message">
                         dependent relationship must contain only letters
                       </p>
@@ -1833,14 +1936,13 @@ employeenomination: {
         )}
       </div>
 
-
-
       {/* Section 7: Emergency Contact Information 1 */}
-
 
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("emergencyContact1")}>
-          {accordionState.emergencyContact1 ? "7. Emergency Contact 1 -" : "7. Emergency Contact 1 +"}
+          {accordionState.emergencyContact1
+            ? "7. Emergency Contact 1 -"
+            : "7. Emergency Contact 1 +"}
         </h6>
         {accordionState.emergencyContact1 && (
           <table>
@@ -1853,15 +1955,21 @@ employeenomination: {
                     name="emergencyContactName1"
                     id="emergencyContactName1"
                     value={formData.emergencyContact1.name}
-                    onChange={(e) => handleInputChange("emergencyContact1", "name", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact1",
+                        "name",
+                        e.target.value
+                      )
+                    }
                     required
                   />
-                   {formData.emergencyContact1.name.length > 0 &&
-              !/^[A-Za-z\s]*$/.test(formData.emergencyContact1.name) && (
-                <p className="error-message">
-                  Full Name must contain only letters
-                </p>
-              )}
+                  {formData.emergencyContact1.name.length > 0 &&
+                    !/^[A-Za-z\s]*$/.test(formData.emergencyContact1.name) && (
+                      <p className="error-message">
+                        Full Name must contain only letters
+                      </p>
+                    )}
                 </td>
               </tr>
               <tr>
@@ -1872,15 +1980,23 @@ employeenomination: {
                     name="emergencyContactRelationship1"
                     id="emergencyContactRelationship1"
                     value={formData.emergencyContact1.relationship}
-                    onChange={(e) => handleInputChange("emergencyContact1", "relationship", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact1",
+                        "relationship",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.emergencyContact1.relationship.length > 0 &&
-              !/^[A-Za-z\s]*$/.test(formData.emergencyContact1.relationship) && (
-                <p className="error-message">
-                  Full Name must contain only letters
-                </p>
-              )}
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.emergencyContact1.relationship
+                    ) && (
+                      <p className="error-message">
+                        Full Name must contain only letters
+                      </p>
+                    )}
                 </td>
               </tr>
               <tr>
@@ -1891,16 +2007,23 @@ employeenomination: {
                     name="emergencyContactLandline1"
                     id="emergencyContactLandline1"
                     value={formData.emergencyContact1.landline}
-                    onChange={(e) => handleInputChange("emergencyContact1", "landline", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact1",
+                        "landline",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.emergencyContact1.landline.length > 0 &&
-                    !/^[0-9][0-9]{11}$/.test(formData.emergencyContact1.landline) && (
+                    !/^[0-9][0-9]{11}$/.test(
+                      formData.emergencyContact1.landline
+                    ) && (
                       <p className="error-message">
                         landline Number must contain exactly 11 digits
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
               <tr>
@@ -1911,16 +2034,24 @@ employeenomination: {
                     name="emergencyContactMobile1"
                     id="emergencyContactMobile1"
                     value={formData.emergencyContact1.mobile}
-                    onChange={(e) => handleInputChange("emergencyContact1", "mobile", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact1",
+                        "mobile",
+                        e.target.value
+                      )
+                    }
                     required
                   />
-                   {formData.emergencyContact1.mobile.length > 0 &&
-                    !/^[6-9][0-9]{9}$/.test(formData.emergencyContact1.mobile) && (
+                  {formData.emergencyContact1.mobile.length > 0 &&
+                    !/^[6-9][0-9]{9}$/.test(
+                      formData.emergencyContact1.mobile
+                    ) && (
                       <p className="error-message">
-                        mobile Number must contain exactly 10 digits, starting with a number between 6 to 9.
+                        mobile Number must contain exactly 10 digits, starting
+                        with a number between 6 to 9.
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
             </tbody>
@@ -1928,13 +2059,13 @@ employeenomination: {
         )}
       </div>
 
-
-         {/* Section 7: Emergency Contact Information 2 */}
-
+      {/* Section 7: Emergency Contact Information 2 */}
 
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("emergencyContact2")}>
-          {accordionState.emergencyContact2 ? "7. Emergency Contact 2 -" : "7. Emergency Contact 2 +"}
+          {accordionState.emergencyContact2
+            ? "7. Emergency Contact 2 -"
+            : "7. Emergency Contact 2 +"}
         </h6>
         {accordionState.emergencyContact2 && (
           <table>
@@ -1947,15 +2078,21 @@ employeenomination: {
                     name="emergencyContactName2"
                     id="emergencyContactName2"
                     value={formData.emergencyContact2.name}
-                    onChange={(e) => handleInputChange("emergencyContact2", "name", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact2",
+                        "name",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.fullName.fullName.length > 0 &&
-              !/^[A-Za-z\s]*$/.test(formData.fullName.fullName) && (
-                <p className="error-message">
-                  Full Name must contain only letters
-                </p>
-              )}
+                    !/^[A-Za-z\s]*$/.test(formData.fullName.fullName) && (
+                      <p className="error-message">
+                        Full Name must contain only letters
+                      </p>
+                    )}
                 </td>
               </tr>
               <tr>
@@ -1966,15 +2103,23 @@ employeenomination: {
                     name="emergencyContactRelationship2"
                     id="emergencyContactRelationship2"
                     value={formData.emergencyContact2.relationship}
-                    onChange={(e) => handleInputChange("emergencyContact2", "relationship", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact2",
+                        "relationship",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.emergencyContact2.relationship.length > 0 &&
-              !/^[A-Za-z\s]*$/.test(formData.emergencyContact2.relationship) && (
-                <p className="error-message">
-                  Full Name must contain only letters
-                </p>
-              )}
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.emergencyContact2.relationship
+                    ) && (
+                      <p className="error-message">
+                        Full Name must contain only letters
+                      </p>
+                    )}
                 </td>
               </tr>
               <tr>
@@ -1985,16 +2130,23 @@ employeenomination: {
                     name="emergencyContactLandline2"
                     id="emergencyContactLandline2"
                     value={formData.emergencyContact2.landline}
-                    onChange={(e) => handleInputChange("emergencyContact2", "landline", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact2",
+                        "landline",
+                        e.target.value
+                      )
+                    }
                     required
                   />
-                   {formData.emergencyContact2.landline.length > 0 &&
-                    !/^[0-9][0-9]{11}$/.test(formData.emergencyContact2.landline) && (
+                  {formData.emergencyContact2.landline.length > 0 &&
+                    !/^[0-9][0-9]{11}$/.test(
+                      formData.emergencyContact2.landline
+                    ) && (
                       <p className="error-message">
                         landline Number must contain exactly 11 digits
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
               <tr>
@@ -2005,28 +2157,38 @@ employeenomination: {
                     name="emergencyContactMobile2"
                     id="emergencyContactMobile2"
                     value={formData.emergencyContact2.mobile}
-                    onChange={(e) => handleInputChange("emergencyContact2", "mobile", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "emergencyContact2",
+                        "mobile",
+                        e.target.value
+                      )
+                    }
                     required
                   />
-                   {formData.emergencyContact2.mobile.length > 0 &&
-                    !/^[6-9][0-9]{9}$/.test(formData.emergencyContact2.mobile) && (
+                  {formData.emergencyContact2.mobile.length > 0 &&
+                    !/^[6-9][0-9]{9}$/.test(
+                      formData.emergencyContact2.mobile
+                    ) && (
                       <p className="error-message">
-                        mobile Number must contain exactly 10 digits, starting with a number between 6 to 9.
+                        mobile Number must contain exactly 10 digits, starting
+                        with a number between 6 to 9.
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
             </tbody>
           </table>
         )}
       </div>
-     
-          {/* Section 8: Education deatails */}
-          
-          <div className="form-section">
+
+      {/* Section 8: Education deatails */}
+
+      <div className="form-section">
         <h6 onClick={() => toggleAccordion("educationdeatails")}>
-          {accordionState.educationdeatails ? "8. Education Details -" : "8. Education Details +"}
+          {accordionState.educationdeatails
+            ? "8. Education Details -"
+            : "8. Education Details +"}
         </h6>
         {accordionState.educationdeatails && (
           <table>
@@ -2049,7 +2211,9 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.degree1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.educationdeatails.degree1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.educationdeatails.degree1
+                    ) && (
                       <p className="error-message">
                         dependent Name must contain only letters
                       </p>
@@ -2061,11 +2225,15 @@ employeenomination: {
                     name="educationdeatailsnameofuniversity1"
                     id="educationdeatailsnameofuniversity1"
                     value={formData.educationdeatails.nameofuniversity1}
-                    onChange={handleeducationdeatailsChange("nameofuniversity1")}
+                    onChange={handleeducationdeatailsChange(
+                      "nameofuniversity1"
+                    )}
                     required
                   />
                   {formData.educationdeatails.nameofuniversity1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.educationdeatails.nameofuniversity1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.educationdeatails.nameofuniversity1
+                    ) && (
                       <p className="error-message">
                         dependent relationship must contain only letters
                       </p>
@@ -2081,13 +2249,15 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.marksObtained1.length > 0 &&
-                    !/^[1-9]{2}\.[0-9]{2}$/.test(formData.educationdeatails.marksObtained1) && (
+                    !/^[1-9]{2}\.[0-9]{2}$/.test(
+                      formData.educationdeatails.marksObtained1
+                    ) && (
                       <p className="error-message">
-                        percentage must contain exactly 2 digits, starting with a number between 1 to 9, followed by a dot (.) and then two digits. EXP : 89.28
+                        percentage must contain exactly 2 digits, starting with
+                        a number between 1 to 9, followed by a dot (.) and then
+                        two digits. EXP : 89.28
                       </p>
-                    )
-                  }
-
+                    )}
                 </td>
                 <td>
                   <input
@@ -2099,7 +2269,9 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.passingyerrar1.length > 0 &&
-                    !/^[1-9][0-9]{3}$/.test(formData.educationdeatails.passingyerrar1) && (
+                    !/^[1-9][0-9]{3}$/.test(
+                      formData.educationdeatails.passingyerrar1
+                    ) && (
                       <p className="error-message">
                         passing yerrar must be a valid number exp:2014
                       </p>
@@ -2107,10 +2279,9 @@ employeenomination: {
                 </td>
               </tr>
 
+              {/* second row */}
 
-               {/* second row */}
-
-               <tr>
+              <tr>
                 <td>
                   <input
                     type="text"
@@ -2121,7 +2292,9 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.degree2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.educationdeatails.degree2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.educationdeatails.degree2
+                    ) && (
                       <p className="error-message">
                         dependent Name must contain only letters
                       </p>
@@ -2133,11 +2306,15 @@ employeenomination: {
                     name="educationdeatailsnameofuniversity2"
                     id="educationdeatailsnameofuniversity2"
                     value={formData.educationdeatails.nameofuniversity2}
-                    onChange={handleeducationdeatailsChange("nameofuniversity2")}
+                    onChange={handleeducationdeatailsChange(
+                      "nameofuniversity2"
+                    )}
                     required
                   />
                   {formData.educationdeatails.nameofuniversity2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.educationdeatails.nameofuniversity2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.educationdeatails.nameofuniversity2
+                    ) && (
                       <p className="error-message">
                         dependent relationship must contain only letters
                       </p>
@@ -2153,13 +2330,15 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.marksObtained2.length > 0 &&
-                    !/^[1-9]{2}\.[0-9]{2}$/.test(formData.educationdeatails.marksObtained2) && (
+                    !/^[1-9]{2}\.[0-9]{2}$/.test(
+                      formData.educationdeatails.marksObtained2
+                    ) && (
                       <p className="error-message">
-                        percentage must contain exactly 2 digits, starting with a number between 1 to 9, followed by a dot (.) and then two digits. EXP : 89.28
+                        percentage must contain exactly 2 digits, starting with
+                        a number between 1 to 9, followed by a dot (.) and then
+                        two digits. EXP : 89.28
                       </p>
-                    )
-                  }
-
+                    )}
                 </td>
                 <td>
                   <input
@@ -2171,18 +2350,19 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.passingyerrar2.length > 0 &&
-                    !/^[1-9][0-9]{3}$/.test(formData.educationdeatails.passingyerrar2) && (
+                    !/^[1-9][0-9]{3}$/.test(
+                      formData.educationdeatails.passingyerrar2
+                    ) && (
                       <p className="error-message">
                         passing yerrar must be a valid number exp:2014
                       </p>
                     )}
                 </td>
               </tr>
-                
 
-                 {/* third row */}
+              {/* third row */}
 
-                 <tr>
+              <tr>
                 <td>
                   <input
                     type="text"
@@ -2193,7 +2373,9 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.degree3.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.educationdeatails.degree3) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.educationdeatails.degree3
+                    ) && (
                       <p className="error-message">
                         dependent Name must contain only letters
                       </p>
@@ -2205,11 +2387,15 @@ employeenomination: {
                     name="educationdeatailsnameofuniversity3"
                     id="educationdeatailsnameofuniversity3"
                     value={formData.educationdeatails.nameofuniversity3}
-                    onChange={handleeducationdeatailsChange("nameofuniversity3")}
+                    onChange={handleeducationdeatailsChange(
+                      "nameofuniversity3"
+                    )}
                     required
                   />
                   {formData.educationdeatails.nameofuniversity3.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.educationdeatails.nameofuniversity3) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.educationdeatails.nameofuniversity3
+                    ) && (
                       <p className="error-message">
                         dependent relationship must contain only letters
                       </p>
@@ -2225,13 +2411,15 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.marksObtained3.length > 0 &&
-                    !/^[1-9]{2}\.[0-9]{2}$/.test(formData.educationdeatails.marksObtained3) && (
+                    !/^[1-9]{2}\.[0-9]{2}$/.test(
+                      formData.educationdeatails.marksObtained3
+                    ) && (
                       <p className="error-message">
-                        percentage must contain exactly 2 digits, starting with a number between 1 to 9, followed by a dot (.) and then two digits. EXP : 89.28
+                        percentage must contain exactly 2 digits, starting with
+                        a number between 1 to 9, followed by a dot (.) and then
+                        two digits. EXP : 89.28
                       </p>
-                    )
-                  }
-
+                    )}
                 </td>
                 <td>
                   <input
@@ -2243,24 +2431,27 @@ employeenomination: {
                     required
                   />
                   {formData.educationdeatails.passingyerrar3.length > 0 &&
-                    !/^[1-9][0-9]{3}$/.test(formData.educationdeatails.passingyerrar3) && (
+                    !/^[1-9][0-9]{3}$/.test(
+                      formData.educationdeatails.passingyerrar3
+                    ) && (
                       <p className="error-message">
                         passing yerrar must be a valid number exp:2014
                       </p>
                     )}
                 </td>
               </tr>
-
             </tbody>
           </table>
         )}
       </div>
 
-             {/* Section 9: Experience history */}
+      {/* Section 9: Experience history */}
 
-          <div className="form-section">
+      <div className="form-section">
         <h6 onClick={() => toggleAccordion("experiencehistory")}>
-          {accordionState.experiencehistory ? "9. experiencehistory -" : "9. experiencehistory +"}
+          {accordionState.experiencehistory
+            ? "9. experiencehistory -"
+            : "9. experiencehistory +"}
         </h6>
         {accordionState.experiencehistory && (
           <table>
@@ -2281,11 +2472,15 @@ employeenomination: {
                     name="experiencehistorynameofthecompany1"
                     id="experiencehistorynameofthecompany1"
                     value={formData.experiencehistory.nameofthecompany1}
-                    onChange={handleexperiencehistoryChange("nameofthecompany1")}
+                    onChange={handleexperiencehistoryChange(
+                      "nameofthecompany1"
+                    )}
                     required
                   />
                   {formData.experiencehistory.nameofthecompany1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.nameofthecompany1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.nameofthecompany1
+                    ) && (
                       <p className="error-message">
                         name of the company must contain only letters
                       </p>
@@ -2301,7 +2496,9 @@ employeenomination: {
                     required
                   />
                   {formData.experiencehistory.designation1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.designation1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.designation1
+                    ) && (
                       <p className="error-message">
                         designation must contain only letters
                       </p>
@@ -2333,17 +2530,21 @@ employeenomination: {
                     name="experiencehistorytotalyearsofExperience1"
                     id="experiencehistorytotalyearsofExperience1"
                     value={formData.experiencehistory.totalyearsofExperience1}
-                    onChange={handleexperiencehistoryChange("totalyearsofExperience1")}
+                    onChange={handleexperiencehistoryChange(
+                      "totalyearsofExperience1"
+                    )}
                     required
                   />
-                       {formData.experiencehistory.totalyearsofExperience1.length > 0 &&
-                        !/^[A-Za-z0-9]*$/.test(formData.experiencehistory.totalyearsofExperience1) && (
-                        <p className="error-message">
-                                total years of Experience must contain letters and numbers.
-                                   </p>
-                                     )
-                                     }
-
+                  {formData.experiencehistory.totalyearsofExperience1.length >
+                    0 &&
+                    !/^[A-Za-z0-9]*$/.test(
+                      formData.experiencehistory.totalyearsofExperience1
+                    ) && (
+                      <p className="error-message">
+                        total years of Experience must contain letters and
+                        numbers.
+                      </p>
+                    )}
                 </td>
                 <td>
                   <input
@@ -2355,7 +2556,9 @@ employeenomination: {
                     required
                   />
                   {formData.experiencehistory.remarks1.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.remarks1) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.remarks1
+                    ) && (
                       <p className="error-message">
                         remarks must contain only letters
                       </p>
@@ -2363,23 +2566,24 @@ employeenomination: {
                 </td>
               </tr>
 
+              {/* second row */}
 
-
- 
-                    {/* second row */}
-
-                    <tr>
+              <tr>
                 <td>
                   <input
                     type="text"
                     name="experiencehistorynameofthecompany2"
                     id="experiencehistorynameofthecompany2"
                     value={formData.experiencehistory.nameofthecompany2}
-                    onChange={handleexperiencehistoryChange("nameofthecompany2")}
+                    onChange={handleexperiencehistoryChange(
+                      "nameofthecompany2"
+                    )}
                     required
                   />
                   {formData.experiencehistory.nameofthecompany2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.nameofthecompany2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.nameofthecompany2
+                    ) && (
                       <p className="error-message">
                         name of the company must contain only letters
                       </p>
@@ -2395,7 +2599,9 @@ employeenomination: {
                     required
                   />
                   {formData.experiencehistory.designation2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.designation2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.designation2
+                    ) && (
                       <p className="error-message">
                         designation must contain only letters
                       </p>
@@ -2427,17 +2633,21 @@ employeenomination: {
                     name="experiencehistorytotalyearsofExperience2"
                     id="experiencehistorytotalyearsofExperience2"
                     value={formData.experiencehistory.totalyearsofExperience2}
-                    onChange={handleexperiencehistoryChange("totalyearsofExperience2")}
+                    onChange={handleexperiencehistoryChange(
+                      "totalyearsofExperience2"
+                    )}
                     required
                   />
-                       {formData.experiencehistory.totalyearsofExperience2.length > 0 &&
-                        !/^[A-Za-z0-9]*$/.test(formData.experiencehistory.totalyearsofExperience2) && (
-                        <p className="error-message">
-                                total years of Experience must contain letters and numbers.
-                                   </p>
-                                     )
-                                     }
-
+                  {formData.experiencehistory.totalyearsofExperience2.length >
+                    0 &&
+                    !/^[A-Za-z0-9]*$/.test(
+                      formData.experiencehistory.totalyearsofExperience2
+                    ) && (
+                      <p className="error-message">
+                        total years of Experience must contain letters and
+                        numbers.
+                      </p>
+                    )}
                 </td>
                 <td>
                   <input
@@ -2449,31 +2659,34 @@ employeenomination: {
                     required
                   />
                   {formData.experiencehistory.remarks2.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.remarks2) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.remarks2
+                    ) && (
                       <p className="error-message">
                         remarks must contain only letters
                       </p>
                     )}
                 </td>
               </tr>
-                 
 
-                 {/* third row */}
+              {/* third row */}
 
-
-
-                 <tr>
+              <tr>
                 <td>
                   <input
                     type="text"
                     name="experiencehistorynameofthecompany3"
                     id="experiencehistorynameofthecompany3"
                     value={formData.experiencehistory.nameofthecompany3}
-                    onChange={handleexperiencehistoryChange("nameofthecompany3")}
+                    onChange={handleexperiencehistoryChange(
+                      "nameofthecompany3"
+                    )}
                     required
                   />
                   {formData.experiencehistory.nameofthecompany3.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.nameofthecompany3) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.nameofthecompany3
+                    ) && (
                       <p className="error-message">
                         name of the company must contain only letters
                       </p>
@@ -2489,7 +2702,9 @@ employeenomination: {
                     required
                   />
                   {formData.experiencehistory.designation3.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.designation3) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.designation3
+                    ) && (
                       <p className="error-message">
                         designation must contain only letters
                       </p>
@@ -2521,17 +2736,21 @@ employeenomination: {
                     name="experiencehistorytotalyearsofExperience3"
                     id="experiencehistorytotalyearsofExperience3"
                     value={formData.experiencehistory.totalyearsofExperience3}
-                    onChange={handleexperiencehistoryChange("totalyearsofExperience3")}
+                    onChange={handleexperiencehistoryChange(
+                      "totalyearsofExperience3"
+                    )}
                     required
                   />
-                       {formData.experiencehistory.totalyearsofExperience3.length > 0 &&
-                        !/^[A-Za-z0-9]*$/.test(formData.experiencehistory.totalyearsofExperience3) && (
-                        <p className="error-message">
-                                total years of Experience must contain letters and numbers.
-                                   </p>
-                                     )
-                                     }
-
+                  {formData.experiencehistory.totalyearsofExperience3.length >
+                    0 &&
+                    !/^[A-Za-z0-9]*$/.test(
+                      formData.experiencehistory.totalyearsofExperience3
+                    ) && (
+                      <p className="error-message">
+                        total years of Experience must contain letters and
+                        numbers.
+                      </p>
+                    )}
                 </td>
                 <td>
                   <input
@@ -2543,26 +2762,27 @@ employeenomination: {
                     required
                   />
                   {formData.experiencehistory.remarks3.length > 0 &&
-                    !/^[A-Za-z\s]*$/.test(formData.experiencehistory.remarks3) && (
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.experiencehistory.remarks3
+                    ) && (
                       <p className="error-message">
                         remarks must contain only letters
                       </p>
                     )}
                 </td>
               </tr>
-
             </tbody>
           </table>
         )}
       </div>
-              
 
-        
-          {/* Section 10: Employeenomination */}
+      {/* Section 10: Employeenomination */}
 
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("employeenomination")}>
-          {accordionState.employeenomination ? "10. Employeenomination  -" : "10. Employeenomination  +"}
+          {accordionState.employeenomination
+            ? "10. Employeenomination  -"
+            : "10. Employeenomination  +"}
         </h6>
         {accordionState.employeenomination && (
           <table>
@@ -2575,15 +2795,21 @@ employeenomination: {
                     name="nominationName"
                     id="nominationName"
                     value={formData.employeenomination.name}
-                    onChange={(e) => handleInputChange("employeenomination", "name", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "employeenomination",
+                        "name",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.employeenomination.name.length > 0 &&
-              !/^[A-Za-z\s]*$/.test(formData.employeenomination.name) && (
-                <p className="error-message">
-                  Full Name must contain only letters
-                </p>
-              )}
+                    !/^[A-Za-z\s]*$/.test(formData.employeenomination.name) && (
+                      <p className="error-message">
+                        Full Name must contain only letters
+                      </p>
+                    )}
                 </td>
               </tr>
               <tr>
@@ -2594,15 +2820,23 @@ employeenomination: {
                     name="NominineeRelationship"
                     id="NominineeRelationship"
                     value={formData.employeenomination.relationship}
-                    onChange={(e) => handleInputChange("employeenomination", "relationship", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "employeenomination",
+                        "relationship",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.employeenomination.relationship.length > 0 &&
-              !/^[A-Za-z\s]*$/.test(formData.employeenomination.relationship) && (
-                <p className="error-message">
-                  Full Name must contain only letters
-                </p>
-              )}
+                    !/^[A-Za-z\s]*$/.test(
+                      formData.employeenomination.relationship
+                    ) && (
+                      <p className="error-message">
+                        Full Name must contain only letters
+                      </p>
+                    )}
                 </td>
               </tr>
               <tr>
@@ -2613,32 +2847,45 @@ employeenomination: {
                     name="nomineeAge"
                     id="nomineeAge"
                     value={formData.employeenomination.age}
-                    onChange={(e) => handleInputChange("employeenomination", "age", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "employeenomination",
+                        "age",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.employeenomination.age.length > 0 &&
                     !/^[0-9]{2}$/.test(formData.employeenomination.age) && (
                       <p className="error-message">
-                        age  must contain exactly 2 digits
+                        age must contain exactly 2 digits
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
               <tr>
                 <td>Address of the Nominee:</td>
                 <td>
-                  <textarea  rows="3" cols="30"
+                  <textarea
+                    rows="3"
+                    cols="30"
                     type="text"
                     name="Nomineeadd"
                     id="Nomineeadd"
                     value={formData.employeenomination.address}
-                    onChange={(e) => handleInputChange("employeenomination", "address", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "employeenomination",
+                        "address",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                 </td>
               </tr>
-               <tr>
+              <tr>
                 <td> Phone number of the Nominee:</td>
                 <td>
                   <input
@@ -2646,28 +2893,38 @@ employeenomination: {
                     name="Nomineephno"
                     id="Nomineephno"
                     value={formData.employeenomination.mobile}
-                    onChange={(e) => handleInputChange("employeenomination", "mobile", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "employeenomination",
+                        "mobile",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.employeenomination.mobile.length > 0 &&
-                    !/^[6-9][0-9]{9}$/.test(formData.employeenomination.mobile) && (
+                    !/^[6-9][0-9]{9}$/.test(
+                      formData.employeenomination.mobile
+                    ) && (
                       <p className="error-message">
-                        mobile Number must contain exactly 10 digits, starting with a number between 6 to 9.
+                        mobile Number must contain exactly 10 digits, starting
+                        with a number between 6 to 9.
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
             </tbody>
           </table>
         )}
       </div>
-     
-       {/* Section 11: Bank Details  */}
 
-       <div className="form-section">
+      {/* Section 11: Bank Details  */}
+
+      <div className="form-section">
         <h6 onClick={() => toggleAccordion("bankDetails")}>
-          {accordionState.bankDetails ? "11. Bank Details  -" : "11. Bank Details  +"}
+          {accordionState.bankDetails
+            ? "11. Bank Details  -"
+            : "11. Bank Details  +"}
         </h6>
         {accordionState.bankDetails && (
           <table>
@@ -2680,7 +2937,13 @@ employeenomination: {
                     name="nominationName"
                     id="nominationName"
                     value={formData.bankDetails.bankName}
-                    onChange={(e) => handleInputChange("bankDetails", "bankName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "bankDetails",
+                        "bankName",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.bankDetails.bankName.length > 0 &&
@@ -2699,13 +2962,20 @@ employeenomination: {
                     name="NominineeRelationship"
                     id="NominineeRelationship"
                     value={formData.bankDetails.bankAcNo}
-                    onChange={(e) => handleInputChange("bankDetails", "bankAcNo", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "bankDetails",
+                        "bankAcNo",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.bankDetails.bankAcNo.length > 0 &&
                     !/^[0-9]{16}$/.test(formData.bankDetails.bankAcNo) && (
                       <p className="error-message">
-                        bank A/c No must be exactly 16 characters long and contain only numbers.
+                        bank A/c No must be exactly 16 characters long and
+                        contain only numbers.
                       </p>
                     )}
                 </td>
@@ -2718,7 +2988,13 @@ employeenomination: {
                     name="nomineeAge"
                     id="nomineeAge"
                     value={formData.bankDetails.bankBranch}
-                    onChange={(e) => handleInputChange("bankDetails", "bankBranch", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "bankDetails",
+                        "bankBranch",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.bankDetails.bankBranch.length > 0 &&
@@ -2726,8 +3002,7 @@ employeenomination: {
                       <p className="error-message">
                         age must contain exactly 10 digits
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
               <tr>
@@ -2738,46 +3013,53 @@ employeenomination: {
                     name="Nomineephno"
                     id="Nomineephno"
                     value={formData.bankDetails.ifscCode}
-                    onChange={(e) => handleInputChange("bankDetails", "ifscCode", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "bankDetails",
+                        "ifscCode",
+                        e.target.value
+                      )
+                    }
                     required
                   />
                   {formData.bankDetails.ifscCode.length > 0 &&
-                    !/^[a-zA-Z0-9]{10}$/.test(formData.bankDetails.ifscCode) && (
+                    !/^[a-zA-Z0-9]{10}$/.test(
+                      formData.bankDetails.ifscCode
+                    ) && (
                       <p className="error-message">
-                        IFSC Code must be exactly 10 characters long and contain only letters and numbers.
+                        IFSC Code must be exactly 10 characters long and contain
+                        only letters and numbers.
                       </p>
-                    )
-                  }
+                    )}
                 </td>
               </tr>
             </tbody>
           </table>
         )}
       </div>
-        
-        {/* Section 12: Acknowledgment */}
 
-        <div className="form-section">
-        <h2 className='Atitile'>ACKNOWLEDGEMENT</h2>
+      {/* Section 12: Acknowledgment */}
+
+      <div className="form-section">
+        <h2 className="Atitile">ACKNOWLEDGEMENT</h2>
         <form>
-          <div >
+          <div>
             <label htmlFor="name">
-              I{' '}
-              <input 
+              I{" "}
+              <input
                 type="text"
                 id="name"
                 value={name}
                 onChange={handleNameChange}
                 placeholder="Enter your name"
-              /> {' '}
+              />{" "}
               agree to the terms and conditions stated as above, and I hereby
               confirm that I will adhere to the policies of the company and
               discharge my duties to the satisfaction of the higher authorities.
             </label>
           </div>
-           
-           <div className='gap'>
-           </div>
+
+          <div className="gap"></div>
           <div className="single-line">
             <label htmlFor="date">Date:</label>
             <input
@@ -2799,45 +3081,8 @@ employeenomination: {
       <button onClick={handleSubmit}>Submit</button>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       {successMessage && <p>{successMessage}</p>}
-      
-      <button >Print</button>
-      
+
+      <button>Print</button>
     </div>
   );
 }
-
-
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

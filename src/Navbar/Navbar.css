@@ -162,7 +162,7 @@ ul {
 .list-items2:hover,
 .sub-list-items2:hover {
   color: rgb(242, 242, 245);
-  background-color: rgba(236, 136, 43, 0.685);
+  background-color: #f3b144;
   cursor: pointer;
 }
 .list-items3:hover,

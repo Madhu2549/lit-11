@@ -1,6 +1,6 @@
 .div4-1 {
   display: flex;
-  background-color: #3e0af8;
+  background-color: #3506dd;
   width: 58%;
   height: 48px;
   border-radius: 100px;
@@ -68,17 +68,17 @@
 
 .user-info-dropdown {
   position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: rgb(71, 7, 219);
+  top: 40%;
+  right: -1.8rem;
+  background-color: rgb(229, 223, 243);
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   /* z-index: 1000; */
-  width: 250px;
+  width: 230px;
   margin-top: 36px;
   margin-left: 10px;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .user-info-dropdown p {

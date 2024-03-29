@@ -95,7 +95,7 @@ const Navbar = () => {
                 BDM &#x25BE;
                 <ul className="dropdown-list">
                   <li className="list-items1 submenu">
-                    Vender Lap
+                    Vendor Lap
                     <ul className="sub-dropdown-list">
                       <li className="sub-list-items1 black">
                         <Link to={"/home/venderRegistration"}>
@@ -143,7 +143,7 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                CO-W & Asset &#x25BE;
+                CO-Work & Asset &#x25BE;
                 <ul className="dropdown-list">
                   <li className="list-items1 submenu">
                     Asset lap
@@ -162,10 +162,26 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li className="list-items2 submenu">
-                    CO-W Lap
+                    CO-Work Lap
                     <ul className="sub-dropdown-list rsm">
                       <li className="sub-list-items1 sub-list-items-1">
                         <Link to={"/home/co-wRegistration"}>Registration</Link>
+                      </li>
+                      <li className="sub-list-items2">
+                        <Link to={"/home/clientSearch"}>Search</Link>
+                      </li>
+                      <li className="sub-list-items3">
+                        <Link to={"/home/clientMangement"}>Management</Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="list-items2 submenu">
+                    Infrastructure Lap
+                    <ul className="sub-dropdown-list rsm">
+                      <li className="sub-list-items1">
+                        <Link to={"/home/clientRegistration"}>
+                          Registration
+                        </Link>
                       </li>
                       <li className="sub-list-items2">
                         <Link to={"/home/clientSearch"}>Search</Link>
