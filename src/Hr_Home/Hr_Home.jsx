@@ -6,16 +6,12 @@ import Navbar from "../Navbar/Navbar";
 
 const Hr_Home = () => {
   return (
-    <div className="main-body">
-      <div className="alpha-page">
-        <Navbar />
-        <SideBar />
-        <section className="abc">
-          <article className="main-page">
-            <MainBar />
-          </article>
-        </section>
-      </div>
+    <div className="alpha-page">
+      <Navbar />
+      <SideBar />
+      <article className="main-page">
+        <MainBar />
+      </article>
     </div>
   );
 };

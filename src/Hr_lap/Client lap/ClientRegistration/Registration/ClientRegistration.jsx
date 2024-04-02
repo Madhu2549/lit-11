@@ -76,7 +76,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="clientId">Client ID</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="clientId"
@@ -97,7 +97,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="date">Date</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="date"
                     name="date"
@@ -117,7 +117,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="clientName">Client Name</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="clientName"
@@ -138,7 +138,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="webSite">Website</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="webSite"
@@ -163,7 +163,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="contactPerson">Contact Person</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="contactPerson"
@@ -188,7 +188,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="contactNo">Contact No</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="contactNo"
@@ -212,7 +212,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="emailId">Email ID</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="emailId"
@@ -238,7 +238,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="meetingTime">Meeting Time</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="time"
                     name="meetingTime"
@@ -257,7 +257,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="whoInvolved">Who Involved</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="whoInvolved"
@@ -280,7 +280,7 @@ export default function ClientRegistration() {
                 <div>
                   <label htmlFor="remark">Remark</label>
                 </div>
-                <div style={{ marginLeft: "-90px" }}>
+                <div>
                   <input
                     type="text"
                     name="remark"

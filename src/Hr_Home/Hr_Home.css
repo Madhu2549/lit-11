@@ -1,21 +1,15 @@
 .main-body {
   display: flex;
-  min-width: auto;
-  min-height: auto;
-}
-section {
-  display: flex;
 }
 .alpha-page {
-  width: 100vh;
-  height: 100vh;
-  overflow-y: auto;
+  width: 100%;
+  height: auto;
 }
 .main-page {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 8rem;
-  width: 70%;
+  width: 80%;
+  position: relative;
+  top: 6rem;
   left: 15rem;
 }

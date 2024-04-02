@@ -4,7 +4,7 @@ import "./SideBar.css";
 
 const SideBar = () => {
   return (
-    <div className="main">
+    <div className="sidebar-main">
       <ul className="sidebar">
         <li className="sidebar-list">
           <Link to={"/home/timetracker"}>Time Tracker</Link>

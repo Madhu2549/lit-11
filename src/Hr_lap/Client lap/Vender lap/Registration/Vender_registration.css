@@ -1,63 +1,57 @@
-.vendormain {
-  width: 1026px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #f8f9fa;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.vendor-canditate-main {
+  padding: 20px;
+  border: 2px solid black;
   text-align: center;
+  position: relative;
+  right: 15rem;
 }
-
-.heading {
+.canditate-heading {
   font-size: 28px;
-  margin-bottom: 20px;
-  color: #17a2b8; /* Color for the form title */
+  color: #032e35;
+  position: relative;
+  bottom: 10px;
 }
-
-.vendormain .form-section label {
-  /* border: 1px solid black; */
-  margin-bottom: 20px;
-  width: 160px;
-  text-align: left;
+.candidate-input-fields {
+  gap: 0px;
+  width: 290px;
+  height: 30px;
+  border-radius: 2px;
 }
-
-.vendormain .form-section input {
-  margin-left: 77px;
-  /* border: 1px solid black; */
-}
-
-.side_by_side {
+.candidate-fields {
   display: flex;
-  margin-top: 15px;
+  flex-direction: row;
+  padding: 10px;
+  margin: 30px;
+  gap: 90px;
 }
-
-.vendorsubmit {
-  background-color: #28a745; /* Green background color for the submit button */
-  color: #fff;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 8px;
+.candidate-input-fields .word {
+  position: relative;
+  right: 90px;
+}
+.candidate-label {
+  font-size: 18px;
+}
+.candidate-submit {
+  background-color: #04661b;
+  width: 90px;
+  height: 35px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 18px; /* Font size for the submit button */
+  font-size: 20px;
+  position: relative;
+  bottom: 10px;
 }
-
-.firstsix {
-  display: flex;
-  justify-content: space-evenly;
-  /* border: 1px solid red; */
+.candidate-er-msg {
+  color: red;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 0.5rem;
+  font-size: 14px;
 }
-
-.leftcol {
-  /* border: 1px solid black; */
-  margin-right: 20px;
-  width: 500px;
-}
-
-.rightcol {
-  /* border: 1px solid black; */
-  margin-left: -25px;
-  width: 500px;
-}
-
-.vendorsubmit {
-  margin-left: 80%;
+.word {
+  padding: 0px;
+  margin-left: 0px;
+  position: relative;
+  left: 30px;
 }

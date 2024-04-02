@@ -4,13 +4,12 @@
   text-align: center;
   row-gap: 40px;
   padding: 12px;
-  width: 197px;
-  height: 600px;
+  width: 195px;
+  height: 80%;
   position: fixed;
   top: 78px;
   background-color: rgba(207, 204, 221, 0.26);
   border-right: 1px solid black;
-  border-top: 1px solid black;
 }
 .sidebar-list {
   color: rgb(8, 8, 8);

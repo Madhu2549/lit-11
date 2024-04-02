@@ -50,7 +50,6 @@ const Navbar = () => {
           <div className="content-navbar">
             <div className="text">
               <p className="company-name">
-                {" "}
                 Welcome to L-IT TRULY SERVICES PVT LTD
               </p>
             </div>
@@ -175,7 +174,7 @@ const Navbar = () => {
                       </li>
                     </ul>
                   </li>
-                  <li className="list-items2 submenu">
+                  <li className="list-items3 submenu">
                     Infrastructure Lap
                     <ul className="sub-dropdown-list rsm">
                       <li className="sub-list-items1">

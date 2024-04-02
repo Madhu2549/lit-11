@@ -1,5 +1,7 @@
 .finance-main {
   border: 2px solid rgba(1, 1, 36, 0.315);
+  position: relative;
+  right: 15rem;
 }
 .form-main {
   display: flex;

@@ -999,72 +999,76 @@ export default function Employee_Register() {
         </h6>
         {accordionState.joiningInfo && (
           <table>
-            <tr>
-              <td>Joining Date (DD/MM/YYYY):</td>
-              <td>
-                <input
-                  type="date"
-                  value={formData.joiningInfo.joiningDate}
-                  onChange={(e) =>
-                    handleInputChange(
-                      "joiningInfo",
-                      "joiningDate",
-                      e.target.value
-                    )
-                  }
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Joining Office/Location:</td>
-              <td>
-                <input
-                  type="text"
-                  value={formData.joiningInfo.joiningOffice}
-                  onChange={(e) =>
-                    handleInputChange(
-                      "joiningInfo",
-                      "joiningOffice",
-                      e.target.value
-                    )
-                  }
-                  required
-                />
-                {formData.joiningInfo.joiningOffice.length > 0 &&
-                  !/^[A-Za-z0-9\s ]*$/.test(
-                    formData.joiningInfo.joiningOffice
-                  ) && (
-                    <p className="error-message">
-                      Joining Office/Location must contain only letters and
-                      numbers
-                    </p>
-                  )}
-              </td>
-            </tr>
-            <tr>
-              <td>Joining Title:</td>
-              <td>
-                <input
-                  type="text"
-                  value={formData.joiningInfo.joiningTitle}
-                  onChange={(e) =>
-                    handleInputChange(
-                      "joiningInfo",
-                      "joiningTitle",
-                      e.target.value
-                    )
-                  }
-                  required
-                />
-                {formData.joiningInfo.joiningTitle.length > 0 &&
-                  !/^[A-Za-z\s ]*$/.test(formData.joiningInfo.joiningTitle) && (
-                    <p className="error-message">
-                      Joining Title must contain only letters
-                    </p>
-                  )}
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Joining Date (DD/MM/YYYY):</td>
+                <td>
+                  <input
+                    type="date"
+                    value={formData.joiningInfo.joiningDate}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "joiningInfo",
+                        "joiningDate",
+                        e.target.value
+                      )
+                    }
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Joining Office/Location:</td>
+                <td>
+                  <input
+                    type="text"
+                    value={formData.joiningInfo.joiningOffice}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "joiningInfo",
+                        "joiningOffice",
+                        e.target.value
+                      )
+                    }
+                    required
+                  />
+                  {formData.joiningInfo.joiningOffice.length > 0 &&
+                    !/^[A-Za-z0-9\s ]*$/.test(
+                      formData.joiningInfo.joiningOffice
+                    ) && (
+                      <p className="error-message">
+                        Joining Office/Location must contain only letters and
+                        numbers
+                      </p>
+                    )}
+                </td>
+              </tr>
+              <tr>
+                <td>Joining Title:</td>
+                <td>
+                  <input
+                    type="text"
+                    value={formData.joiningInfo.joiningTitle}
+                    onChange={(e) =>
+                      handleInputChange(
+                        "joiningInfo",
+                        "joiningTitle",
+                        e.target.value
+                      )
+                    }
+                    required
+                  />
+                  {formData.joiningInfo.joiningTitle.length > 0 &&
+                    !/^[A-Za-z\s ]*$/.test(
+                      formData.joiningInfo.joiningTitle
+                    ) && (
+                      <p className="error-message">
+                        Joining Title must contain only letters
+                      </p>
+                    )}
+                </td>
+              </tr>
+            </tbody>
           </table>
         )}
       </div>

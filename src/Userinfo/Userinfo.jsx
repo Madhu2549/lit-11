@@ -73,35 +73,23 @@ export default function Userinfo() {
   };
 
   return (
-    <div className="userinformation">
-      <div className="div4-1">
-        <div className="user-info-container">
-          <div className="user-info-button" onClick={fetchData}>
-            <FontAwesomeIcon icon={faUserTie} className="userimge" />
-          </div>
-          {isUserInfoVisible && userInfo && (
-            <div className="user-info-dropdown" ref={dropdownRef}>
-              <p>{userInfo.fullName}</p>
-              <p>{userInfo.empid}</p>
-              <p>{userInfo.email}</p>
-              <hr />
-              <p>Current Date: {formatDate(currentDateTime)}</p>
-              <p>Last Login: {userInfo.lastLogin}</p>
-              <button onClick={handleLogout}>Logout</button>
-            </div>
-          )}
+    <div className="user-details">
+      <div className="user-info-container">
+        <div className="user-info-button" onClick={fetchData}>
+          <FontAwesomeIcon icon={faUserTie} className="userimge" />
         </div>
+        {isUserInfoVisible && userInfo && (
+          <div className="user-info-dropdown" ref={dropdownRef}>
+            <p>{userInfo.fullName}</p>
+            <p>{userInfo.empid}</p>
+            <p>{userInfo.email}</p>
+            <hr />
+            <p>Current Date: {formatDate(currentDateTime)}</p>
+            <p>Last Login: {userInfo.lastLogin}</p>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        )}
       </div>
-      {/* <div className="div4-3">
-            <h5>Mubeen</h5>
-               
-            </div> */}
-      {/* <div className='div4-2'>
-                <div className="datetime">
-                    <p>{formatDate(currentDateTime)}</p>
-                    <p>{formatTime(currentDateTime)}</p>
-                </div>
-            </div> */}
     </div>
   );
 }
