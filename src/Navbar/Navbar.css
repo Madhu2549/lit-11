@@ -1,11 +1,9 @@
 .header {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   width: 100%;
-  margin: 0%;
-  padding: 0%;
   position: fixed;
-  top: 0;
   z-index: 9999;
 }
 a {
@@ -19,21 +17,15 @@ ul {
 .navbar {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 78%;
 }
 .text {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(245, 242, 242);
-  color: rgba(10, 10, 10, 0.918);
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: -1.1rem;
-  position: relative;
-  text-align: center;
 }
-.company-name {
-  position: relative;
-  right: 4rem;
+.company-name-homepage {
+  padding: 11px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
 }
 
 .content-navbar {
@@ -42,34 +34,18 @@ ul {
 }
 .nav-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  color: rgb(228, 232, 235);
-  background-color: rgb(15, 15, 15);
-  position: relative;
-  margin: 0px;
-  gap: 3rem;
+  color: white;
+  background-color: black;
+  column-gap: 3rem;
+  padding: 13px;
+  margin-top: 0px;
 }
-.nav-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  margin: 0rem;
-  cursor: pointer;
-  font-weight: 400;
-}
-
 .dropdown-list {
   display: none;
   position: absolute;
-  margin-inline-start: 10px;
 }
 .nav-item:hover {
   cursor: pointer;
-  background-color: rgba(236, 209, 236, 0.014);
-  border-radius: 5px;
 }
 .nav-item:hover .dropdown-list {
   display: block;
@@ -78,17 +54,17 @@ ul {
 .list-items1,
 .list-items2,
 .list-items3 {
-  background-color: rgb(184, 189, 240);
+  background-color: rgb(250, 247, 247);
   text-decoration: none;
   color: black;
   cursor: pointer;
   position: relative;
   font-weight: 500;
-  width: 130px;
-  top: 85px;
-  right: 55px;
+  width: 120px;
   padding: 10px;
-  border-radius: 3px;
+  top: 15px;
+  right: 40px;
+  border-radius: 2px;
 }
 
 .sub-dropdown-list {
@@ -96,7 +72,6 @@ ul {
   flex-direction: column;
   position: absolute;
   cursor: pointer;
-  left: 100%;
 }
 .sub-dropdown-list:hover {
   display: flex;
@@ -108,8 +83,6 @@ ul {
   flex-direction: column;
   position: absolute;
   cursor: pointer;
-  left: 100%;
-  border-radius: 3px;
 }
 .nav-item:hover .sub-dropdown-list {
   display: none;
@@ -117,7 +90,6 @@ ul {
 .submenu:hover .sub-dropdown-list {
   display: block;
   position: absolute;
-  left: 0%;
 }
 .list-items1:hover a,
 .list-items2:hover a,
@@ -134,13 +106,12 @@ ul {
   position: relative;
   font-weight: 500;
   color: black;
+  background-color: rgb(250, 247, 247);
   width: 120px;
-  left: 81%;
-  border-radius: 4px;
-  bottom: 30px;
-  padding: 7px;
-  border: 1px solid rgb(245, 245, 245);
-  background-color: rgb(243, 240, 240);
+  padding: 8px;
+  left: 90px;
+  bottom: 25px;
+  border-radius: 2px;
 }
 .list-items1:hover,
 .sub-list-items1:hover {
@@ -168,6 +139,5 @@ ul {
 
 .user-icon {
   display: flex;
-  position: absolute;
-  left: 80rem;
+  position: relative;
 }

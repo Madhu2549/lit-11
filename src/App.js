@@ -24,7 +24,7 @@ import ClientManagement from "./Hr_lap/Client lap/ClientRegistration/Management/
 import Intern_Register from "./Hr_lap/internship lap/Internship_Register/Intern_Register";
 import Intern_Search from "./Hr_lap/internship lap/internship_Search/Intern_Search";
 import Intern_Management from "./Hr_lap/internship lap/internship_management/Intern_Management";
-import Employee_Register from "./employee lap/employeeRegister/Employee_Register";
+//import Employee_Register from "./employee lap/employeeRegister/Employee_Register";
 import Employee_Search from "./employee lap/employeeSearch/Employee_Search";
 import Employee_Management from "./employee lap/employeeManagement/Employee_Management";
 import RequirementSearch from "./Requirement/RequirementSearch/RequirementSearch";
@@ -33,6 +33,11 @@ import AssetRegistrations from "./assets lap/assetregistration/AssetsRegister";
 import ITSearch from "./it_lap/it_lap_Search/ITSearch";
 import Co_w_registration from "./co-w lap/co-w Registration/Co-wRegistration";
 import FinanceRegister from "./finance lap/financeRegister/FinanceRegister";
+import React from "react";
+
+const Lazy_Employee_Register = React.lazy(() =>
+  import("./employee lap/employeeRegister/Employee_Register")
+);
 
 function App() {
   return (
@@ -68,7 +73,11 @@ function App() {
 
           <Route
             path="/home/employeeRegistation"
-            element={<Employee_Register />}
+            element={
+              <React.Suspense fallback={<div>"Loading..." </div>}>
+                <Lazy_Employee_Register />
+              </React.Suspense>
+            }
           />
           <Route path="/home/employeeSearch" element={<Employee_Search />} />
           <Route

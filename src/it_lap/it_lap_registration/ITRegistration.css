@@ -1,18 +1,26 @@
-/* Registration Form Container */
-.it-main {
-  width: 40rem;
+.it-reg-form {
+  width: 75%;
   position: relative;
-  right: 5rem;
-}
-
-.itmain .form-section {
-  margin-bottom: 20px;
-}
-
-/* Headers */
-.itmain .form-section h3 {
-  cursor: pointer;
+  left: 5rem;
   border: 1px solid black;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(198, 182, 219, 0.637);
+  padding: 10px;
+}
+.itlap-submit {
+  margin-left: 40%;
+  margin-top: 20px;
+}
+.it-heading {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #1d0653;
+}
+.it-reg-form .form-section h3 {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  padding: 10px;
 }
 
 textarea {
@@ -20,25 +28,19 @@ textarea {
   margin-bottom: 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: px;
 }
 
 label {
   display: block;
-  margin: 10px 0 5px;
+  margin: 0px 0 5px;
   font-weight: bold;
-}
-
-/* Table Styles */
-.itmain .form-section table {
-  border-collapse: collapse;
-  margin-bottom: 10px;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 4px;
+  border: px solid #ddd;
+  padding: px;
   text-align: left;
 }
 

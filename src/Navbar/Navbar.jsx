@@ -49,9 +49,9 @@ const Navbar = () => {
         <nav className="navbar">
           <div className="content-navbar">
             <div className="text">
-              <p className="company-name">
+              <div className="company-name-homepage">
                 Welcome to L-IT TRULY SERVICES PVT LTD
-              </p>
+              </div>
             </div>
             <ul className="nav-list">
               <li className="nav-item">
@@ -175,7 +175,7 @@ const Navbar = () => {
                     </ul>
                   </li>
                   <li className="list-items3 submenu">
-                    Infrastructure Lap
+                    Infrastructure
                     <ul className="sub-dropdown-list rsm">
                       <li className="sub-list-items1">
                         <Link to={"/home/clientRegistration"}>

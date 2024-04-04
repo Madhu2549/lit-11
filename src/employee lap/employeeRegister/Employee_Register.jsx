@@ -958,7 +958,7 @@ export default function Employee_Register() {
   // prient e
 
   return (
-    <div className="registration-form">
+    <div className="employee-form">
       <h2>Registration Form</h2>
 
       {/* Section 1: Full Name */}

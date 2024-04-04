@@ -1,9 +1,13 @@
 /* Registration.css */
 
-.registration-form {
-  max-width: 800px;
+.employee-form {
+  width: 80%;
   position: relative;
-  right: 10rem;
+  left: 5rem;
+  border: 1px solid black;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(198, 182, 219, 0.637);
+  padding: 10px;
 }
 
 .form-section {

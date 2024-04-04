@@ -1,9 +1,13 @@
 .vendor-canditate-main {
+  width: 70%;
   padding: 20px;
   border: 2px solid black;
   text-align: center;
-  position: relative;
-  right: 15rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  border: 1px solid black;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(198, 182, 219, 0.637);
 }
 .canditate-heading {
   font-size: 28px;

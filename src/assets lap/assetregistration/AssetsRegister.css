@@ -2,12 +2,28 @@
   display: flex;
   justify-content: center;
 }
+.first-floor-radio,
+.second-floor-radio {
+  position: relative;
+  right: 100px;
+  bottom: 2px;
+}
 
 .radio1 {
   display: flex;
-  justify-content: center;
-}
 
+  justify-content: center;
+  gap: 0px;
+}
+.radio1 label {
+  position: relative;
+  right: 90px;
+  margin-left: 50px;
+}
+h2 {
+  color: #17a2b8;
+  margin-right: 150px;
+}
 .firstfloormain {
   width: 1091px;
 }

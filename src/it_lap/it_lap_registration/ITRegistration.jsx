@@ -168,8 +168,8 @@ export default function ITRegistration() {
   };
 
   return (
-    <div className="it-main">
-      <h4 className="itheading">IT Recruitment Lap Registration</h4>
+    <div className="it-reg-form">
+      <h4 className="it-heading">IT Recruitment Registration</h4>
 
       <div className="form-section">
         <form>
@@ -819,7 +819,7 @@ export default function ITRegistration() {
         </form>
       </div>
 
-      <button type="submit" className="itlapsubmit" onClick={handleFormSubmit}>
+      <button type="submit" className="itlap-submit" onClick={handleFormSubmit}>
         Submit
       </button>
       {/* <button type="button" onClick={handleReset}>Reset</button> */}

@@ -63,11 +63,11 @@ export default function ClientRegistration() {
   };
 
   return (
-    <div className="clientmain">
+    <div className="client-main">
       <h4 className="heading">Client Registration</h4>
 
       {/* Section: Registration */}
-      <div className="form-section">
+      <div className="client-form">
         <form onSubmit={handleFormSubmit}>
           {/* ... (existing code for form inputs) */}
           <div className="firstsix">
@@ -108,7 +108,6 @@ export default function ClientRegistration() {
                     title="date must contain only numbers"
                     required
                     max={new Date().getFullYear() - 1 + "-12-31"}
-                    style={{ width: "280px", height: "38px" }}
                   />
                 </div>
               </div>
@@ -152,8 +151,7 @@ export default function ClientRegistration() {
                   {webSite &&
                     !/^(https?:\/\/)?(www\.)?.+\..+$/.test(webSite) && (
                       <p className="error-message">
-                        Please enter a valid website URL starting with http://,
-                        https://, or www.
+                        Enter a valid website URL Ex.. http://, https://, or www
                       </p>
                     )}
                 </div>
@@ -201,8 +199,7 @@ export default function ClientRegistration() {
                   />
                   {contactNo && !/^[0-9]{10}$/.test(contactNo) && (
                     <p className="error-message">
-                      Please enter a valid contact number in the format
-                      xxxxxxxxxx
+                      Please enter a valid contact number
                     </p>
                   )}
                 </div>
@@ -248,7 +245,6 @@ export default function ClientRegistration() {
                     pattern="[0-9]*"
                     title="meeting time must contain only numbers"
                     required
-                    style={{ width: "280px", height: "38px" }}
                   />
                 </div>
               </div>

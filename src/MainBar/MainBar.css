@@ -1,7 +1,10 @@
 .mainbar {
   padding: 0px;
   position: relative;
-  left: 18rem;
+  width: 100%;
+  height: 100%;
+  left: rem;
+  top: 1rem;
 }
 .mainbar h1 {
   text-align: center;

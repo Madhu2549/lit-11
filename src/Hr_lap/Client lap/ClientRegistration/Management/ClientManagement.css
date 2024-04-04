@@ -1,50 +1,17 @@
 .search-page-container {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
+  max-width: 80%;
   /* text-align: center; */
-}
-
-.search-bar-container {
-  margin-top: 20px;
-
-  display: flex;
-
-  flex-direction: column;
-  /* Align items vertically */
-
-  align-items: center;
-  /* Center the content horizontally */
-}
-
-label {
-  display: block;
-
-  margin-top: 10px;
-
-  font-size: 18px;
-
-  color: black;
 }
 
 .search-input-container {
   display: flex;
-
+  height: 50px;
   justify-content: center;
-  /* Center the input horizontally */
-
-  max-width: 325px;
-
-  width: 100%;
-  /* Ensure the input container takes full width */
 }
 
 .search-symbol {
   padding: 15px;
-
-  margin-top: 10px;
-
+  margin-top: 20px;
   background-color: #e74c3c;
 
   color: #fff;

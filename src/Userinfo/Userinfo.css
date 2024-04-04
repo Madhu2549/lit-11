@@ -1,18 +1,23 @@
 .user-details {
   display: flex;
+  justify-content: center;
+  background-color: #343c8e;
+  width: 137%;
+  height: 85%;
+  /* display: flex;
   width: 48px;
   height: 48px;
   background-color: #3506dd;
   position: relative;
   top: 45px;
-  border-radius: 25px;
+  border-radius: 25px; */
 }
 .fontsize {
   height: 15px;
 }
 
 .userimge {
-  height: 35px;
+  height: 45px;
 }
 
 .datetime {
@@ -38,21 +43,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
+  /* position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .user-info-button {
   cursor: pointer;
+  color: white;
+  /* cursor: pointer;
   color: rgb(255, 255, 255);
   position: relative;
   left: 9px;
-  bottom: 1px;
+  bottom: 1px; */
 }
 
 .user-info-dropdown {
-  position: relative;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(248, 244, 244);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 250px;
+  margin-top: 36px;
+  margin-left: 10px;
+  color: black;
+  /* position: relative;
   background-color: rgb(193, 177, 230);
   border-radius: 15px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); */
 }
 
 .user-info-dropdown p {

@@ -958,7 +958,7 @@ export default function Intern_Register() {
   // prient e
 
   return (
-    <div className="registration-form">
+    <div className="intern-form">
       <h2>Registration Form</h2>
 
       {/* Section 1: Full Name */}
@@ -2450,8 +2450,8 @@ export default function Intern_Register() {
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("experiencehistory")}>
           {accordionState.experiencehistory
-            ? "9. experiencehistory -"
-            : "9. experiencehistory +"}
+            ? "9. Experience History -"
+            : "9. Experience History +"}
         </h6>
         {accordionState.experiencehistory && (
           <table>
@@ -2781,8 +2781,8 @@ export default function Intern_Register() {
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("employeenomination")}>
           {accordionState.employeenomination
-            ? "10. Employeenomination  -"
-            : "10. Employeenomination  +"}
+            ? "10. Employee Nomination  -"
+            : "10. Employee Nomination  +"}
         </h6>
         {accordionState.employeenomination && (
           <table>

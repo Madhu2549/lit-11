@@ -307,24 +307,24 @@ function AssetRegistrations() {
       <div className="radio1">
         <label htmlFor="firstFloor">First Floor </label>
         <input
+          className="first-floor-radio"
           type="radio"
           id="firstFloor"
           name="floor"
           value="first"
           checked={floor === "first"}
           onChange={handleFloorChange}
-          style={{ marginLeft: "-140px" }}
         />
 
         <label htmlFor="secondFloor">Second Floor</label>
         <input
+          className="second-floor-radio"
           type="radio"
           id="secondFloor"
           name="floor"
           value="second"
           checked={floor === "second"}
           onChange={handleFloorChange}
-          style={{ marginLeft: "-140px" }}
         />
       </div>
 

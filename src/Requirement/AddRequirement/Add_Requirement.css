@@ -1,10 +1,17 @@
 /* Default styles */
 .add-requirement-container {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 30px;
+  width: 70%;
+  position: relative;
+  left: 5rem;
+  border: 1px solid black;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(198, 182, 219, 0.637);
+  padding: 10px;
 }
-
+.req-input-fields {
+  width: 300px;
+  height: 30px;
+}
 .add-requirement-container table {
   width: 80%;
   margin-bottom: 20px;
@@ -13,17 +20,15 @@
   margin-right: auto;
 }
 
-
-.placeholder{
+.placeholder {
   width: 5px;
   height: 20px;
-
 }
 td {
   padding: 8px;
   border: 1px solid #ccc;
   font-weight: bolder;
-  font-size:large;
+  font-size: large;
 }
 
 h2 {
@@ -32,16 +37,10 @@ h2 {
 }
 
 .error-message {
-  
   color: red;
 }
 
-.textbox{
-  
-}
-
 .options {
-
   font-size: small;
 }
 
@@ -59,7 +58,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 label {
@@ -78,12 +77,14 @@ label {
   font-size: small;
 }
 
-.final {
-  margin-left: 82%;
+.add-final {
+  margin-left: 40%;
+  padding: 20px;
 }
 
-.addheading {
+.add-heading {
   font-size: 28px;
+  padding: 25px;
   margin: 0px 0px 0px 35%; /* Adjusted margin for centering */
   color: #17a2b8;
 }
@@ -128,6 +129,6 @@ label {
     margin: 10px auto; /* Center the heading */
   }
 }
-.others{
+.others {
   font-size: xx-small;
 }

@@ -11,7 +11,7 @@
   position: relative;
   left: 12rem;
   border-radius: 25px;
-  box-shadow: 5px 5px 5px rgba(41, 2, 92, 0.774);
+  box-shadow: 5px 5px 5px rgba(41, 2, 92, 0.474);
   /* 5px right, 5px down, 5px blur, 50% opacity gray shadow */
 }
 .LeftContainer_header {

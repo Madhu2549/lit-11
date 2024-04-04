@@ -1,77 +1,56 @@
-.cowregmain {
-  width: 1026px;
-
-  margin: 0 auto;
-
-  padding: 30px;
-
+.co-work-main {
+  padding: 20px;
   background-color: #f8f9fa;
-
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0 0 20px rgba(198, 182, 219, 0.637);
+}
+.cowork-container {
+  display: flex;
+  gap: 10rem;
+}
+.cowork-form input {
+  width: 300px;
+  height: 30px;
+  border-radius: 3px;
+}
+.left-side-cowork {
+  margin-left: 5rem;
+}
+.right-side-cowork {
+  margin-right: 5rem;
+}
+.co-work-heading {
+  font-size: 28px;
+  margin: 0px;
+  margin-bottom: 1rem;
+  color: #08525e;
   text-align: center;
 }
 
-.cowregmain .form-section {
-  margin-top: 20px;
-}
-
-.heading {
-  font-size: 28px;
-
-  margin: 0px;
-
-  color: #17a2b8; /* Color for the form title */
-}
-
-.cowregmain .form-section label {
-  /* border: 1px solid black; */
-
-  margin-bottom: 20px;
-
-  width: 160px;
-
+.cowork-form label {
+  margin-bottom: 5px;
+  margin-left: 2px;
   text-align: left;
 }
 
-.cowregmain .form-section input {
-  margin-left: 70px;
-
-  /* border: 1px solid black; */
-}
-
-button {
-  background-color: #28a745; /* Green background color for the submit button */
-
+.cowork-submit {
+  height: 35px;
+  background-color: #28a745;
   color: #fff;
-
-  padding: auto;
-
   border: none;
-
-  border-radius: 8px;
-
+  border-radius: 3px;
   cursor: pointer;
-
   font-size: 18px;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  left: 26rem;
 }
-
-.cowregsubmit {
-  margin-left: 78%;
-
-  margin-top: 10px;
-}
-
 .success-message {
   color: green;
-
   margin-top: 10px;
 }
 
 .error-message {
   color: red;
-
-  margin-top: 10px;
-
-  margin-left: 100px;
+  margin-left: 3px;
 }

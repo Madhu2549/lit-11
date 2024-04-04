@@ -12,31 +12,30 @@
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 25px;
   margin-bottom: 20px;
-  color: #17a2b8; /* Color for the form title */
+  color: #200242; /* Color for the form title */
 }
 
 .search-bar-container {
-  margin-top: 20px; /* Add margin to separate from the form title */
+  /* Add margin to separate from the form title */
   text-align: center; /* Center the search bar */
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
   font-size: 18px; /* Font size for labels */
   color: #495057; /* Text color for labels */
 }
 
 button {
+  width: 80px;
+  height: 20px;
   background-color: #28a745; /* Green background color for the submit button */
   color: #fff;
   height: 40px;
-  margin-left: 1px;
-  margin-top: 4px;
-  border: none;
-  border-radius: 8px;
+  margin-left: 1rem;
+  border-radius: px;
   cursor: pointer;
   font-size: 18px; /* Font size for the submit button */
 }
